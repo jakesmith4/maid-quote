@@ -1,0 +1,140 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.underline {
+  width: 5rem;
+  height: 2px;
+  background: #222;
+  margin: 0 auto 3rem;
+}
+
+.hours-container {
+  margin-bottom: 0.5rem;
+}
+
+#hours {
+  width: 80px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 0.2rem;
+}
+
+.rate-container {
+  margin-bottom: 1rem;
+}
+
+#tax-rate {
+  width: 80px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 0.2rem;
+}
+
+.select-box {
+  width: 85vw;
+  max-width: 1170px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  background: rgb(202, 202, 202);
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 0.25rem;
+}
+
+#options {
+  width: 80%;
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  height: 2.5rem;
+  cursor: pointer;
+  color: green;
+}
+
+.hours-container input {
+  color: green;
+}
+
+.rate-container input {
+  color: green;
+}
+
+.loading-spinner {
+  display: none;
+}
+
+.display-options {
+  display: none;
+}
+
+.amount {
+  background: rgb(177, 174, 174);
+  width: 75%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.amount h3 {
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+}
+
+.amount h4 {
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+.amount p {
+  letter-spacing: 1px;
+  color: green;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.amount .hours {
+  color: red;
+}
+
+@media screen and (min-width: 576px) {
+  .display-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .display-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .display-options {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .display-options {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
