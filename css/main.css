@@ -126,8 +126,16 @@ small {
   font-size: 1.5rem;
 }
 
-.amount .hours {
-  color: green;
+.amount .hours-green {
+  color: green !important;
+}
+
+/* .amount .hours {
+  color: black !important;
+} */
+
+.amount .hours-red {
+  color: red !important;
 }
 
 .amount h5 {

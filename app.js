@@ -33,11 +33,26 @@ const hChange = document.querySelectorAll('.h-change');
 // Change Event On scaleMonthly
 scaleMonthly.addEventListener('change', () => {
   const scaleValue = scaleMonthly.options[scaleMonthly.selectedIndex].value;
-  console.log(scaleValue);
-  spinner.style.display = 'block';
-  displayOptions.style.display = 'none';
-  amountHours[4].style.color = 'red';
-  scaleChange[4].style.background = 'red';
+
+  const scaleValueNum = parseFloat(scaleValue.substring(1));
+  const scaleValueNumMinus = parseFloat(scaleValue);
+  console.log(scaleValueNumMinus);
+
+  if (scaleValueNum === 0) {
+    amountHours[4].style.color = 'green';
+    scaleChange[4].style.background = 'green';
+  }
+
+  if (scaleValueNum > 0) {
+    amountHours[4].style.color = 'black';
+    scaleChange[4].style.background = 'black';
+  }
+
+  if (scaleValueNumMinus < 0) {
+    amountHours[4].style.color = 'red';
+    scaleChange[4].style.background = 'red';
+  }
+
   hChange[4].style.color = 'red';
   hChange[4].textContent = 'Hours Changed';
 
@@ -48,10 +63,6 @@ scaleMonthly.addEventListener('change', () => {
     hChange[4].textContent = 'Change Hours';
   }
 
-  setTimeout(() => {
-    spinner.style.display = 'none';
-    displayOptions.style.display = 'grid';
-  }, 1000);
   const hoursSelect = document.getElementById('hours').value;
   const taxRate = document.getElementById('tax-rate').value;
 
@@ -161,12 +172,26 @@ scaleMonthly.addEventListener('change', () => {
 // Change Event On scaleBiWeekly
 scaleBiWeekly.addEventListener('change', () => {
   const scaleValue = scaleBiWeekly.options[scaleBiWeekly.selectedIndex].value;
-  // console.log(scaleValue);
-  spinner.style.display = 'block';
-  displayOptions.style.display = 'none';
 
-  amountHours[3].style.color = 'red';
-  scaleChange[3].style.background = 'red';
+  const scaleValueNum = parseFloat(scaleValue.substring(1));
+  const scaleValueNumMinus = parseFloat(scaleValue);
+  console.log(scaleValueNumMinus);
+
+  if (scaleValueNum === 0) {
+    amountHours[3].style.color = 'green';
+    scaleChange[3].style.background = 'green';
+  }
+
+  if (scaleValueNum > 0) {
+    amountHours[3].style.color = 'black';
+    scaleChange[3].style.background = 'black';
+  }
+
+  if (scaleValueNumMinus < 0) {
+    amountHours[3].style.color = 'red';
+    scaleChange[3].style.background = 'red';
+  }
+
   hChange[3].style.color = 'red';
   hChange[3].textContent = 'Hours Changed';
 
@@ -177,10 +202,6 @@ scaleBiWeekly.addEventListener('change', () => {
     hChange[3].textContent = 'Change Hours';
   }
 
-  setTimeout(() => {
-    spinner.style.display = 'none';
-    displayOptions.style.display = 'grid';
-  }, 1000);
   const hoursSelect = document.getElementById('hours').value;
   const taxRate = document.getElementById('tax-rate').value;
 
@@ -302,12 +323,26 @@ scaleBiWeekly.addEventListener('change', () => {
 // Change Event On scaleWeekly
 scaleWeekly.addEventListener('change', () => {
   const scaleValue = scaleWeekly.options[scaleWeekly.selectedIndex].value;
-  // console.log(scaleValue);
-  spinner.style.display = 'block';
-  displayOptions.style.display = 'none';
 
-  amountHours[2].style.color = 'red';
-  scaleChange[2].style.background = 'red';
+  const scaleValueNum = parseFloat(scaleValue.substring(1));
+  const scaleValueNumMinus = parseFloat(scaleValue);
+  console.log(scaleValueNumMinus);
+
+  if (scaleValueNum === 0) {
+    amountHours[2].style.color = 'green';
+    scaleChange[2].style.background = 'green';
+  }
+
+  if (scaleValueNum > 0) {
+    amountHours[2].style.color = 'black';
+    scaleChange[2].style.background = 'black';
+  }
+
+  if (scaleValueNumMinus < 0) {
+    amountHours[2].style.color = 'red';
+    scaleChange[2].style.background = 'red';
+  }
+
   hChange[2].style.color = 'red';
   hChange[2].textContent = 'Hours Changed';
 
@@ -318,10 +353,6 @@ scaleWeekly.addEventListener('change', () => {
     hChange[2].textContent = 'Change Hours';
   }
 
-  setTimeout(() => {
-    spinner.style.display = 'none';
-    displayOptions.style.display = 'grid';
-  }, 1000);
   const hoursSelect = document.getElementById('hours').value;
   const taxRate = document.getElementById('tax-rate').value;
 
@@ -431,12 +462,26 @@ scaleWeekly.addEventListener('change', () => {
 // Change Event On scaleGeneral
 scaleGeneral.addEventListener('change', () => {
   const scaleValue = scaleGeneral.options[scaleGeneral.selectedIndex].value;
-  // console.log(scaleValue);
-  spinner.style.display = 'block';
-  displayOptions.style.display = 'none';
 
-  amountHours[1].style.color = 'red';
-  scaleChange[1].style.background = 'red';
+  const scaleValueNum = parseFloat(scaleValue.substring(1));
+  const scaleValueNumMinus = parseFloat(scaleValue);
+  console.log(scaleValueNumMinus);
+
+  if (scaleValueNum === 0) {
+    amountHours[1].style.color = 'green';
+    scaleChange[1].style.background = 'green';
+  }
+
+  if (scaleValueNum > 0) {
+    amountHours[1].style.color = 'black';
+    scaleChange[1].style.background = 'black';
+  }
+
+  if (scaleValueNumMinus < 0) {
+    amountHours[1].style.color = 'red';
+    scaleChange[1].style.background = 'red';
+  }
+
   hChange[1].style.color = 'red';
   hChange[1].textContent = 'Hours Changed';
 
@@ -447,10 +492,6 @@ scaleGeneral.addEventListener('change', () => {
     hChange[1].textContent = 'Change Hours';
   }
 
-  setTimeout(() => {
-    spinner.style.display = 'none';
-    displayOptions.style.display = 'grid';
-  }, 1000);
   const hoursSelect = document.getElementById('hours').value;
   const taxRate = document.getElementById('tax-rate').value;
 
@@ -560,12 +601,26 @@ scaleGeneral.addEventListener('change', () => {
 // Change Event On Scale
 scale.addEventListener('change', () => {
   const scaleValue = scale.options[scale.selectedIndex].value;
-  // console.log(scaleValue);
-  spinner.style.display = 'block';
-  displayOptions.style.display = 'none';
 
-  amountHours[0].style.color = 'red';
-  scaleChange[0].style.background = 'red';
+  const scaleValueNum = parseFloat(scaleValue.substring(1));
+  const scaleValueNumMinus = parseFloat(scaleValue);
+  console.log(scaleValueNumMinus);
+
+  if (scaleValueNum === 0) {
+    amountHours[0].style.color = 'green';
+    scaleChange[0].style.background = 'green';
+  }
+
+  if (scaleValueNum > 0) {
+    amountHours[0].style.color = 'black';
+    scaleChange[0].style.background = 'black';
+  }
+
+  if (scaleValueNumMinus < 0) {
+    amountHours[0].style.color = 'red';
+    scaleChange[0].style.background = 'red';
+  }
+
   hChange[0].style.color = 'red';
   hChange[0].textContent = 'Hours Changed';
 
@@ -576,10 +631,6 @@ scale.addEventListener('change', () => {
     hChange[0].textContent = 'Change Hours';
   }
 
-  setTimeout(() => {
-    spinner.style.display = 'none';
-    displayOptions.style.display = 'grid';
-  }, 1000);
   const hoursSelect = document.getElementById('hours').value;
   const taxRate = document.getElementById('tax-rate').value;
 
