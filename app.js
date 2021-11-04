@@ -563,37 +563,37 @@ scaleGeneral.addEventListener('change', () => {
     ifExpress(4);
   }
   if (vell === '1600-2000') {
-    ifExpress(8);
+    ifExpress(4.5);
   }
   if (vell === '2100-2200') {
-    ifExpress(9.5);
+    ifExpress(5);
   }
   if (vell === '2300-2500') {
-    ifExpress(10.5);
+    ifExpress(5.5);
   }
   if (vell === '2600-2800') {
-    ifExpress(11.5);
+    ifExpress(6);
   }
   if (vell === '2900-3100') {
-    ifExpress(12.5);
+    ifExpress(6.5);
   }
   if (vell === '3200-3400') {
-    ifExpress(13.5);
+    ifExpress(7);
   }
   if (vell === '3500-3700') {
-    ifExpress(14.5);
+    ifExpress(7.5);
   }
   if (vell === '3800-4000') {
-    ifExpress(15.5);
+    ifExpress(8);
   }
   if (vell === '4100-4300') {
-    ifExpress(16.5);
+    ifExpress(8.5);
   }
   if (vell === '4400-4600') {
-    ifExpress(17.5);
+    ifExpress(9);
   }
   if (vell === '4800-5000') {
-    ifExpress(18.5);
+    ifExpress(9.5);
   }
 });
 
