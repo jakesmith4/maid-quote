@@ -106,7 +106,7 @@ small {
   padding: 0.5rem;
   border-radius: 0.25rem;
   outline: 2px solid rgb(199, 195, 195);
-  outline-offset: 2px;
+  outline-offset: 2.1px;
 }
 
 .amount h3 {
