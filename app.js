@@ -66,6 +66,18 @@ scaleMonthly.addEventListener('change', () => {
   const vell = select.options[select.selectedIndex].value;
 
   function ifExpress(hour) {
+    if (scaleValue === '-2') {
+      changeMonthly(hour - 2);
+    }
+    if (scaleValue === '-1.75') {
+      changeMonthly(hour - 1.75);
+    }
+    if (scaleValue === '-1.50') {
+      changeMonthly(hour - 1.5);
+    }
+    if (scaleValue === '-1.25') {
+      changeMonthly(hour - 1.25);
+    }
     if (scaleValue === '-1') {
       changeMonthly(hour - 1);
     }
@@ -92,6 +104,18 @@ scaleMonthly.addEventListener('change', () => {
     }
     if (scaleValue === '+1') {
       changeMonthly(hour + 1);
+    }
+    if (scaleValue === '+1.25') {
+      changeMonthly(hour + 1.25);
+    }
+    if (scaleValue === '+1.50') {
+      changeMonthly(hour + 1.5);
+    }
+    if (scaleValue === '+1.75') {
+      changeMonthly(hour + 1.75);
+    }
+    if (scaleValue === '+2') {
+      changeMonthly(hour + 2);
     }
   }
 
@@ -171,6 +195,30 @@ scaleBiWeekly.addEventListener('change', () => {
   const vell = select.options[select.selectedIndex].value;
 
   function ifExpress(hour) {
+    if (scaleValue === '-2') {
+      changeBiWeekly(hour - 2);
+    }
+    if (scaleValue === '-1.75') {
+      changeBiWeekly(hour - 1.75);
+    }
+    if (scaleValue === '-1.50') {
+      changeBiWeekly(hour - 1.5);
+    }
+    if (scaleValue === '-1.25') {
+      changeBiWeekly(hour - 1.25);
+    }
+    if (scaleValue === '-1') {
+      changeBiWeekly(hour - 1);
+    }
+    if (scaleValue === '-.75') {
+      changeBiWeekly(hour - 0.75);
+    }
+    if (scaleValue === '-.50') {
+      changeBiWeekly(hour - 0.5);
+    }
+    if (scaleValue === '-.25') {
+      changeBiWeekly(hour - 0.25);
+    }
     if (scaleValue === '-1') {
       changeBiWeekly(hour - 1);
     }
@@ -197,6 +245,18 @@ scaleBiWeekly.addEventListener('change', () => {
     }
     if (scaleValue === '+1') {
       changeBiWeekly(hour + 1);
+    }
+    if (scaleValue === '+1.25') {
+      changeBiWeekly(hour + 1.25);
+    }
+    if (scaleValue === '+1.50') {
+      changeBiWeekly(hour + 1.5);
+    }
+    if (scaleValue === '+1.75') {
+      changeBiWeekly(hour + 1.75);
+    }
+    if (scaleValue === '+2') {
+      changeBiWeekly(hour + 2);
     }
   }
 
@@ -276,6 +336,18 @@ scaleWeekly.addEventListener('change', () => {
   const vell = select.options[select.selectedIndex].value;
 
   function ifExpress(hour) {
+    if (scaleValue === '-2') {
+      changeWeekly(hour - 2);
+    }
+    if (scaleValue === '-1.75') {
+      changeWeekly(hour - 1.75);
+    }
+    if (scaleValue === '-1.50') {
+      changeWeekly(hour - 1.5);
+    }
+    if (scaleValue === '-1.25') {
+      changeWeekly(hour - 1.25);
+    }
     if (scaleValue === '-1') {
       changeWeekly(hour - 1);
     }
@@ -302,6 +374,18 @@ scaleWeekly.addEventListener('change', () => {
     }
     if (scaleValue === '+1') {
       changeWeekly(hour + 1);
+    }
+    if (scaleValue === '+1.25') {
+      changeWeekly(hour + 1.25);
+    }
+    if (scaleValue === '+1.50') {
+      changeWeekly(hour + 1.5);
+    }
+    if (scaleValue === '+1.75') {
+      changeWeekly(hour + 1.75);
+    }
+    if (scaleValue === '+2') {
+      changeWeekly(hour + 2);
     }
   }
 
@@ -381,6 +465,18 @@ scaleGeneral.addEventListener('change', () => {
   const vell = select.options[select.selectedIndex].value;
 
   function ifExpress(hour) {
+    if (scaleValue === '-2') {
+      changeGeneral(hour - 2);
+    }
+    if (scaleValue === '-1.75') {
+      changeGeneral(hour - 1.75);
+    }
+    if (scaleValue === '-1.50') {
+      changeGeneral(hour - 1.5);
+    }
+    if (scaleValue === '-1.25') {
+      changeGeneral(hour - 1.25);
+    }
     if (scaleValue === '-1') {
       changeGeneral(hour - 1);
     }
@@ -407,6 +503,18 @@ scaleGeneral.addEventListener('change', () => {
     }
     if (scaleValue === '+1') {
       changeGeneral(hour + 1);
+    }
+    if (scaleValue === '+1.25') {
+      changeGeneral(hour + 1.25);
+    }
+    if (scaleValue === '+1.50') {
+      changeGeneral(hour + 1.5);
+    }
+    if (scaleValue === '+1.75') {
+      changeGeneral(hour + 1.75);
+    }
+    if (scaleValue === '+2') {
+      changeGeneral(hour + 2);
     }
   }
 
@@ -486,6 +594,18 @@ scale.addEventListener('change', () => {
   const vell = select.options[select.selectedIndex].value;
 
   function ifExpress(hour) {
+    if (scaleValue === '-2') {
+      changeDeep(hour - 2);
+    }
+    if (scaleValue === '-1.75') {
+      changeDeep(hour - 1.75);
+    }
+    if (scaleValue === '-1.50') {
+      changeDeep(hour - 1.5);
+    }
+    if (scaleValue === '-1.25') {
+      changeDeep(hour - 1.25);
+    }
     if (scaleValue === '-1') {
       changeDeep(hour - 1);
     }
@@ -512,6 +632,18 @@ scale.addEventListener('change', () => {
     }
     if (scaleValue === '+1') {
       changeDeep(hour + 1);
+    }
+    if (scaleValue === '+1.25') {
+      changeDeep(hour + 1.25);
+    }
+    if (scaleValue === '+1.50') {
+      changeDeep(hour + 1.5);
+    }
+    if (scaleValue === '+1.75') {
+      changeDeep(hour + 1.75);
+    }
+    if (scaleValue === '+2') {
+      changeDeep(hour + 2);
     }
   }
 
