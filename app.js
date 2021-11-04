@@ -5,29 +5,542 @@ const displayOptions = document.querySelector('.display-options');
 const amount = document.querySelector('.amount');
 const hourRate = document.getElementById('hours');
 const tax = document.getElementById('tax-rate');
+const deep = document.querySelector('.deep');
+const general = document.querySelector('.general');
+const weekly = document.querySelector('.weekly');
+const biWeekly = document.querySelector('.bi-weekly');
+const monthly = document.querySelector('.monthly');
+const deepHours = document.querySelector('.deep-hours');
+const generalHours = document.querySelector('.general-hours');
+const weeklyHours = document.querySelector('.weekly-hours');
+const biWeeklyHours = document.querySelector('.bi-weekly-hours');
+const monthlyHours = document.querySelector('.monthly-hours');
+const amountHours = document.querySelectorAll('.hours');
+const scale = document.querySelector('.scale-deep');
+const scaleOption = scale.getElementsByTagName('option');
+const scaleGeneral = document.querySelector('.scale-general');
+const GeneralOption = scaleGeneral.getElementsByTagName('option');
+const scaleWeekly = document.querySelector('.scale-weekly');
+const weeklyOption = scaleWeekly.getElementsByTagName('option');
+const scaleBiWeekly = document.querySelector('.scale-bi-weekly');
+const scaleBiWeeklyOption = scaleBiWeekly.getElementsByTagName('option');
+const scaleMonthly = document.querySelector('.scale-monthly');
+const scaleMonthlyOption = scaleMonthly.getElementsByTagName('option');
+console.log(amountHours);
+
+// Event Listner
+// Change Event On scaleMonthly
+scaleMonthly.addEventListener('change', () => {
+  const scaleValue = scaleMonthly.options[scaleMonthly.selectedIndex].value;
+  console.log(scaleValue);
+  spinner.style.display = 'block';
+  displayOptions.style.display = 'none';
+  amountHours[4].style.color = 'red';
+
+  if (scaleValue === '0') {
+    amountHours[4].style.color = 'green';
+  }
+
+  setTimeout(() => {
+    spinner.style.display = 'none';
+    displayOptions.style.display = 'grid';
+  }, 1000);
+  const hoursSelect = document.getElementById('hours').value;
+  const taxRate = document.getElementById('tax-rate').value;
+
+  function changeMonthly(hours) {
+    // Monthly
+    monthly.textContent =
+      hours * hoursSelect + percentage(hours * hoursSelect, taxRate);
+    // Monthly Hours
+    monthlyHours.textContent = hours;
+  }
+
+  const vell = select.options[select.selectedIndex].value;
+
+  function ifExpress(hour) {
+    if (scaleValue === '-1') {
+      changeMonthly(hour - 1);
+    }
+    if (scaleValue === '-.75') {
+      changeMonthly(hour - 0.75);
+    }
+    if (scaleValue === '-.50') {
+      changeMonthly(hour - 0.5);
+    }
+    if (scaleValue === '-.25') {
+      changeMonthly(hour - 0.25);
+    }
+    if (scaleValue === '0') {
+      changeMonthly(hour);
+    }
+    if (scaleValue === '+.25') {
+      changeMonthly(hour + 0.25);
+    }
+    if (scaleValue === '+.50') {
+      changeMonthly(hour + 0.5);
+    }
+    if (scaleValue === '+.75') {
+      changeMonthly(hour + 0.75);
+    }
+    if (scaleValue === '+1') {
+      changeMonthly(hour + 1);
+    }
+  }
+
+  if (vell === '1000-1500') {
+    ifExpress(3.25);
+  }
+  if (vell === '1600-2000') {
+    ifExpress(3.5);
+  }
+  if (vell === '2100-2200') {
+    ifExpress(4);
+  }
+  if (vell === '2300-2500') {
+    ifExpress(4.25);
+  }
+  if (vell === '2600-2800') {
+    ifExpress(4.5);
+  }
+  if (vell === '2900-3100') {
+    ifExpress(4.75);
+  }
+  if (vell === '3200-3400') {
+    ifExpress(5);
+  }
+  if (vell === '3500-3700') {
+    ifExpress(5.25);
+  }
+  if (vell === '3800-4000') {
+    ifExpress(5.5);
+  }
+  if (vell === '4100-4300') {
+    ifExpress(5.75);
+  }
+  if (vell === '4400-4600') {
+    ifExpress(6);
+  }
+  if (vell === '4800-5000') {
+    ifExpress(6.25);
+  }
+});
+
+// Event Listner
+// Change Event On scaleBiWeekly
+scaleBiWeekly.addEventListener('change', () => {
+  const scaleValue = scaleBiWeekly.options[scaleBiWeekly.selectedIndex].value;
+  // console.log(scaleValue);
+  spinner.style.display = 'block';
+  displayOptions.style.display = 'none';
+
+  amountHours[3].style.color = 'red';
+
+  if (scaleValue === '0') {
+    amountHours[3].style.color = 'green';
+  }
+
+  setTimeout(() => {
+    spinner.style.display = 'none';
+    displayOptions.style.display = 'grid';
+  }, 1000);
+  const hoursSelect = document.getElementById('hours').value;
+  const taxRate = document.getElementById('tax-rate').value;
+
+  function changeBiWeekly(hours) {
+    // Bi-Weekly
+    biWeekly.textContent =
+      hours * hoursSelect + percentage(hours * hoursSelect, taxRate);
+    // Bi-Weekly Hours
+    biWeeklyHours.textContent = hours;
+  }
+
+  const vell = select.options[select.selectedIndex].value;
+
+  function ifExpress(hour) {
+    if (scaleValue === '-1') {
+      changeBiWeekly(hour - 1);
+    }
+    if (scaleValue === '-.75') {
+      changeBiWeekly(hour - 0.75);
+    }
+    if (scaleValue === '-.50') {
+      changeBiWeekly(hour - 0.5);
+    }
+    if (scaleValue === '-.25') {
+      changeBiWeekly(hour - 0.25);
+    }
+    if (scaleValue === '0') {
+      changeBiWeekly(hour);
+    }
+    if (scaleValue === '+.25') {
+      changeBiWeekly(hour + 0.25);
+    }
+    if (scaleValue === '+.50') {
+      changeBiWeekly(hour + 0.5);
+    }
+    if (scaleValue === '+.75') {
+      changeBiWeekly(hour + 0.75);
+    }
+    if (scaleValue === '+1') {
+      changeBiWeekly(hour + 1);
+    }
+  }
+
+  if (vell === '1000-1500') {
+    ifExpress(3);
+  }
+  if (vell === '1600-2000') {
+    ifExpress(3.25);
+  }
+  if (vell === '2100-2200') {
+    ifExpress(3.75);
+  }
+  if (vell === '2300-2500') {
+    ifExpress(4);
+  }
+  if (vell === '2600-2800') {
+    ifExpress(4.25);
+  }
+  if (vell === '2900-3100') {
+    ifExpress(4.5);
+  }
+  if (vell === '3200-3400') {
+    ifExpress(4.75);
+  }
+  if (vell === '3500-3700') {
+    ifExpress(5);
+  }
+  if (vell === '3800-4000') {
+    ifExpress(5.25);
+  }
+  if (vell === '4100-4300') {
+    ifExpress(5.5);
+  }
+  if (vell === '4400-4600') {
+    ifExpress(5.75);
+  }
+  if (vell === '4800-5000') {
+    ifExpress(6);
+  }
+});
+
+// Event Listner
+// Change Event On scaleWeekly
+scaleWeekly.addEventListener('change', () => {
+  const scaleValue = scaleWeekly.options[scaleWeekly.selectedIndex].value;
+  // console.log(scaleValue);
+  spinner.style.display = 'block';
+  displayOptions.style.display = 'none';
+
+  amountHours[2].style.color = 'red';
+
+  if (scaleValue === '0') {
+    amountHours[2].style.color = 'green';
+  }
+
+  setTimeout(() => {
+    spinner.style.display = 'none';
+    displayOptions.style.display = 'grid';
+  }, 1000);
+  const hoursSelect = document.getElementById('hours').value;
+  const taxRate = document.getElementById('tax-rate').value;
+
+  function changeWeekly(hours) {
+    // Weekly
+    weekly.textContent =
+      hours * hoursSelect + percentage(hours * hoursSelect, taxRate);
+    // Weekly Hours
+    weeklyHours.textContent = hours;
+  }
+
+  const vell = select.options[select.selectedIndex].value;
+
+  function ifExpress(hour) {
+    if (scaleValue === '-1') {
+      changeWeekly(hour - 1);
+    }
+    if (scaleValue === '-.75') {
+      changeWeekly(hour - 0.75);
+    }
+    if (scaleValue === '-.50') {
+      changeWeekly(hour - 0.5);
+    }
+    if (scaleValue === '-.25') {
+      changeWeekly(hour - 0.25);
+    }
+    if (scaleValue === '0') {
+      changeWeekly(hour);
+    }
+    if (scaleValue === '+.25') {
+      changeWeekly(hour + 0.25);
+    }
+    if (scaleValue === '+.50') {
+      changeWeekly(hour + 0.5);
+    }
+    if (scaleValue === '+.75') {
+      changeWeekly(hour + 0.75);
+    }
+    if (scaleValue === '+1') {
+      changeWeekly(hour + 1);
+    }
+  }
+
+  if (vell === '1000-1500') {
+    ifExpress(2.5);
+  }
+  if (vell === '1600-2000') {
+    ifExpress(3);
+  }
+  if (vell === '2100-2200') {
+    ifExpress(3.5);
+  }
+  if (vell === '2300-2500') {
+    ifExpress(3.75);
+  }
+  if (vell === '2600-2800') {
+    ifExpress(4);
+  }
+  if (vell === '2900-3100') {
+    ifExpress(4.25);
+  }
+  if (vell === '3200-3400') {
+    ifExpress(4.5);
+  }
+  if (vell === '3500-3700') {
+    ifExpress(4.75);
+  }
+  if (vell === '3800-4000') {
+    ifExpress(5);
+  }
+  if (vell === '4100-4300') {
+    ifExpress(5.25);
+  }
+  if (vell === '4400-4600') {
+    ifExpress(5.5);
+  }
+  if (vell === '4800-5000') {
+    ifExpress(5.75);
+  }
+});
+
+// Event Listner
+// Change Event On scaleGeneral
+scaleGeneral.addEventListener('change', () => {
+  const scaleValue = scaleGeneral.options[scaleGeneral.selectedIndex].value;
+  // console.log(scaleValue);
+  spinner.style.display = 'block';
+  displayOptions.style.display = 'none';
+
+  amountHours[1].style.color = 'red';
+
+  if (scaleValue === '0') {
+    amountHours[1].style.color = 'green';
+  }
+
+  setTimeout(() => {
+    spinner.style.display = 'none';
+    displayOptions.style.display = 'grid';
+  }, 1000);
+  const hoursSelect = document.getElementById('hours').value;
+  const taxRate = document.getElementById('tax-rate').value;
+
+  function changeGeneral(hours) {
+    // General
+    general.textContent =
+      hours * hoursSelect + percentage(hours * hoursSelect, taxRate);
+    // General Hours
+    generalHours.textContent = hours;
+  }
+
+  const vell = select.options[select.selectedIndex].value;
+
+  function ifExpress(hour) {
+    if (scaleValue === '-1') {
+      changeGeneral(hour - 1);
+    }
+    if (scaleValue === '-.75') {
+      changeGeneral(hour - 0.75);
+    }
+    if (scaleValue === '-.50') {
+      changeGeneral(hour - 0.5);
+    }
+    if (scaleValue === '-.25') {
+      changeGeneral(hour - 0.25);
+    }
+    if (scaleValue === '0') {
+      changeGeneral(hour);
+    }
+    if (scaleValue === '+.25') {
+      changeGeneral(hour + 0.25);
+    }
+    if (scaleValue === '+.50') {
+      changeGeneral(hour + 0.5);
+    }
+    if (scaleValue === '+.75') {
+      changeGeneral(hour + 0.75);
+    }
+    if (scaleValue === '+1') {
+      changeGeneral(hour + 1);
+    }
+  }
+
+  if (vell === '1000-1500') {
+    ifExpress(4);
+  }
+  if (vell === '1600-2000') {
+    ifExpress(8);
+  }
+  if (vell === '2100-2200') {
+    ifExpress(9.5);
+  }
+  if (vell === '2300-2500') {
+    ifExpress(10.5);
+  }
+  if (vell === '2600-2800') {
+    ifExpress(11.5);
+  }
+  if (vell === '2900-3100') {
+    ifExpress(12.5);
+  }
+  if (vell === '3200-3400') {
+    ifExpress(13.5);
+  }
+  if (vell === '3500-3700') {
+    ifExpress(14.5);
+  }
+  if (vell === '3800-4000') {
+    ifExpress(15.5);
+  }
+  if (vell === '4100-4300') {
+    ifExpress(16.5);
+  }
+  if (vell === '4400-4600') {
+    ifExpress(17.5);
+  }
+  if (vell === '4800-5000') {
+    ifExpress(18.5);
+  }
+});
+
+// Event Listner
+// Change Event On Scale
+scale.addEventListener('change', () => {
+  const scaleValue = scale.options[scale.selectedIndex].value;
+  // console.log(scaleValue);
+  spinner.style.display = 'block';
+  displayOptions.style.display = 'none';
+
+  amountHours[0].style.color = 'red';
+
+  if (scaleValue === '0') {
+    amountHours[0].style.color = 'green';
+  }
+
+  setTimeout(() => {
+    spinner.style.display = 'none';
+    displayOptions.style.display = 'grid';
+  }, 1000);
+  const hoursSelect = document.getElementById('hours').value;
+  const taxRate = document.getElementById('tax-rate').value;
+
+  function changeDeep(hours) {
+    // Deep
+    deep.textContent =
+      hours * hoursSelect + percentage(hours * hoursSelect, taxRate);
+    // Deep Hours
+    deepHours.textContent = hours;
+  }
+
+  const vell = select.options[select.selectedIndex].value;
+
+  function ifExpress(hour) {
+    if (scaleValue === '-1') {
+      changeDeep(hour - 1);
+    }
+    if (scaleValue === '-.75') {
+      changeDeep(hour - 0.75);
+    }
+    if (scaleValue === '-.50') {
+      changeDeep(hour - 0.5);
+    }
+    if (scaleValue === '-.25') {
+      changeDeep(hour - 0.25);
+    }
+    if (scaleValue === '0') {
+      changeDeep(hour);
+    }
+    if (scaleValue === '+.25') {
+      changeDeep(hour + 0.25);
+    }
+    if (scaleValue === '+.50') {
+      changeDeep(hour + 0.5);
+    }
+    if (scaleValue === '+.75') {
+      changeDeep(hour + 0.75);
+    }
+    if (scaleValue === '+1') {
+      changeDeep(hour + 1);
+    }
+  }
+
+  if (vell === '1000-1500') {
+    ifExpress(6.5);
+  }
+  if (vell === '1600-2000') {
+    ifExpress(8);
+  }
+  if (vell === '2100-2200') {
+    ifExpress(9.5);
+  }
+  if (vell === '2300-2500') {
+    ifExpress(10.5);
+  }
+  if (vell === '2600-2800') {
+    ifExpress(11.5);
+  }
+  if (vell === '2900-3100') {
+    ifExpress(12.5);
+  }
+  if (vell === '3200-3400') {
+    ifExpress(13.5);
+  }
+  if (vell === '3500-3700') {
+    ifExpress(14.5);
+  }
+  if (vell === '3800-4000') {
+    ifExpress(15.5);
+  }
+  if (vell === '4100-4300') {
+    ifExpress(16.5);
+  }
+  if (vell === '4400-4600') {
+    ifExpress(17.5);
+  }
+  if (vell === '4800-5000') {
+    ifExpress(18.5);
+  }
+});
 
 // Event Listner
 // Input Event On Tax Rate
 tax.addEventListener('input', () => {
   spinner.style.display = 'block';
   displayOptions.style.display = 'none';
+  amountHours.forEach((item) => {
+    item.style.color = 'green';
+  });
 
   setTimeout(() => {
     spinner.style.display = 'none';
     displayOptions.style.display = 'grid';
   }, 1000);
   const cleanValue = select.options[select.selectedIndex].value;
-  console.log(cleanValue);
-  const deep = document.querySelector('.deep');
-  const general = document.querySelector('.general');
-  const weekly = document.querySelector('.weekly');
-  const biWeekly = document.querySelector('.bi-weekly');
-  const monthly = document.querySelector('.monthly');
-  const deepHours = document.querySelector('.deep-hours');
-  const generalHours = document.querySelector('.general-hours');
-  const weeklyHours = document.querySelector('.weekly-hours');
-  const biWeeklyHours = document.querySelector('.bi-weekly-hours');
-  const monthlyHours = document.querySelector('.monthly-hours');
+  scale.value = scaleOption[4];
+  scaleGeneral.value = scaleOption[4];
+  scaleWeekly.value = scaleOption[4];
+  scaleBiWeekly.value = scaleOption[4];
+  scaleMonthly.value = scaleOption[4];
   const hoursSelect = document.getElementById('hours').value;
   const taxRate = document.getElementById('tax-rate').value;
 
@@ -151,23 +664,20 @@ tax.addEventListener('input', () => {
 hourRate.addEventListener('input', () => {
   spinner.style.display = 'block';
   displayOptions.style.display = 'none';
+  amountHours.forEach((item) => {
+    item.style.color = 'green';
+  });
 
   setTimeout(() => {
     spinner.style.display = 'none';
     displayOptions.style.display = 'grid';
   }, 1000);
   const cleanValue = select.options[select.selectedIndex].value;
-  console.log(cleanValue);
-  const deep = document.querySelector('.deep');
-  const general = document.querySelector('.general');
-  const weekly = document.querySelector('.weekly');
-  const biWeekly = document.querySelector('.bi-weekly');
-  const monthly = document.querySelector('.monthly');
-  const deepHours = document.querySelector('.deep-hours');
-  const generalHours = document.querySelector('.general-hours');
-  const weeklyHours = document.querySelector('.weekly-hours');
-  const biWeeklyHours = document.querySelector('.bi-weekly-hours');
-  const monthlyHours = document.querySelector('.monthly-hours');
+  scale.value = scaleOption[4];
+  scaleGeneral.value = scaleOption[4];
+  scaleWeekly.value = scaleOption[4];
+  scaleBiWeekly.value = scaleOption[4];
+  scaleMonthly.value = scaleOption[4];
   const hoursSelect = document.getElementById('hours').value;
   const taxRate = document.getElementById('tax-rate').value;
 
@@ -287,27 +797,24 @@ hourRate.addEventListener('input', () => {
 });
 
 // Event Listener
-// Change Event
+// Change Event On Square Footage
 select.addEventListener('change', () => {
   spinner.style.display = 'block';
   displayOptions.style.display = 'none';
+  amountHours.forEach((item) => {
+    item.style.color = 'green';
+  });
 
   setTimeout(() => {
     spinner.style.display = 'none';
     displayOptions.style.display = 'grid';
   }, 1000);
   const cleanValue = select.options[select.selectedIndex].value;
-  console.log(cleanValue);
-  const deep = document.querySelector('.deep');
-  const general = document.querySelector('.general');
-  const weekly = document.querySelector('.weekly');
-  const biWeekly = document.querySelector('.bi-weekly');
-  const monthly = document.querySelector('.monthly');
-  const deepHours = document.querySelector('.deep-hours');
-  const generalHours = document.querySelector('.general-hours');
-  const weeklyHours = document.querySelector('.weekly-hours');
-  const biWeeklyHours = document.querySelector('.bi-weekly-hours');
-  const monthlyHours = document.querySelector('.monthly-hours');
+  scale.value = scaleOption[4];
+  scaleGeneral.value = scaleOption[4];
+  scaleWeekly.value = scaleOption[4];
+  scaleBiWeekly.value = scaleOption[4];
+  scaleMonthly.value = scaleOption[4];
   const hoursSelect = document.getElementById('hours').value;
   const taxRate = document.getElementById('tax-rate').value;
 
