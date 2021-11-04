@@ -132,13 +132,12 @@ small {
 
 .amount h5 {
   letter-spacing: 1px;
-  color: red;
+  color: green;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
 }
 
 #scale {
-  background: red;
   color: #fff;
   font-weight: bold;
   letter-spacing: 2px;
@@ -146,6 +145,10 @@ small {
   padding: 0 0.2rem;
   border-color: #fff;
   cursor: pointer;
+}
+
+.scale-change {
+  background: green;
 }
 
 @media screen and (min-width: 576px) {

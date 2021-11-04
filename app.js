@@ -26,7 +26,8 @@ const scaleBiWeekly = document.querySelector('.scale-bi-weekly');
 const scaleBiWeeklyOption = scaleBiWeekly.getElementsByTagName('option');
 const scaleMonthly = document.querySelector('.scale-monthly');
 const scaleMonthlyOption = scaleMonthly.getElementsByTagName('option');
-console.log(amountHours);
+const scaleChange = document.querySelectorAll('.scale-change');
+const hChange = document.querySelectorAll('.h-change');
 
 // Event Listner
 // Change Event On scaleMonthly
@@ -36,9 +37,15 @@ scaleMonthly.addEventListener('change', () => {
   spinner.style.display = 'block';
   displayOptions.style.display = 'none';
   amountHours[4].style.color = 'red';
+  scaleChange[4].style.background = 'red';
+  hChange[4].style.color = 'red';
+  hChange[4].textContent = 'Hours Changed';
 
   if (scaleValue === '0') {
     amountHours[4].style.color = 'green';
+    scaleChange[4].style.background = 'green';
+    hChange[4].style.color = 'green';
+    hChange[4].textContent = 'Change Hours';
   }
 
   setTimeout(() => {
@@ -135,9 +142,15 @@ scaleBiWeekly.addEventListener('change', () => {
   displayOptions.style.display = 'none';
 
   amountHours[3].style.color = 'red';
+  scaleChange[3].style.background = 'red';
+  hChange[3].style.color = 'red';
+  hChange[3].textContent = 'Hours Changed';
 
   if (scaleValue === '0') {
     amountHours[3].style.color = 'green';
+    scaleChange[3].style.background = 'green';
+    hChange[3].style.color = 'green';
+    hChange[3].textContent = 'Change Hours';
   }
 
   setTimeout(() => {
@@ -234,9 +247,15 @@ scaleWeekly.addEventListener('change', () => {
   displayOptions.style.display = 'none';
 
   amountHours[2].style.color = 'red';
+  scaleChange[2].style.background = 'red';
+  hChange[2].style.color = 'red';
+  hChange[2].textContent = 'Hours Changed';
 
   if (scaleValue === '0') {
     amountHours[2].style.color = 'green';
+    scaleChange[2].style.background = 'green';
+    hChange[2].style.color = 'green';
+    hChange[2].textContent = 'Change Hours';
   }
 
   setTimeout(() => {
@@ -333,9 +352,15 @@ scaleGeneral.addEventListener('change', () => {
   displayOptions.style.display = 'none';
 
   amountHours[1].style.color = 'red';
+  scaleChange[1].style.background = 'red';
+  hChange[1].style.color = 'red';
+  hChange[1].textContent = 'Hours Changed';
 
   if (scaleValue === '0') {
     amountHours[1].style.color = 'green';
+    scaleChange[1].style.background = 'green';
+    hChange[1].style.color = 'green';
+    hChange[1].textContent = 'Change Hours';
   }
 
   setTimeout(() => {
@@ -432,9 +457,15 @@ scale.addEventListener('change', () => {
   displayOptions.style.display = 'none';
 
   amountHours[0].style.color = 'red';
+  scaleChange[0].style.background = 'red';
+  hChange[0].style.color = 'red';
+  hChange[0].textContent = 'Hours Changed';
 
   if (scaleValue === '0') {
     amountHours[0].style.color = 'green';
+    scaleChange[0].style.background = 'green';
+    hChange[0].style.color = 'green';
+    hChange[0].textContent = 'Change Hours';
   }
 
   setTimeout(() => {
@@ -529,6 +560,13 @@ tax.addEventListener('input', () => {
   displayOptions.style.display = 'none';
   amountHours.forEach((item) => {
     item.style.color = 'green';
+  });
+  scaleChange.forEach((item) => {
+    item.style.background = 'green';
+  });
+  hChange.forEach((item) => {
+    item.style.color = 'green';
+    item.textContent = 'Change Hours';
   });
 
   setTimeout(() => {
@@ -667,6 +705,13 @@ hourRate.addEventListener('input', () => {
   amountHours.forEach((item) => {
     item.style.color = 'green';
   });
+  scaleChange.forEach((item) => {
+    item.style.background = 'green';
+  });
+  hChange.forEach((item) => {
+    item.style.color = 'green';
+    item.textContent = 'Change Hours';
+  });
 
   setTimeout(() => {
     spinner.style.display = 'none';
@@ -803,6 +848,13 @@ select.addEventListener('change', () => {
   displayOptions.style.display = 'none';
   amountHours.forEach((item) => {
     item.style.color = 'green';
+  });
+  scaleChange.forEach((item) => {
+    item.style.background = 'green';
+  });
+  hChange.forEach((item) => {
+    item.style.color = 'green';
+    item.textContent = 'Change Hours';
   });
 
   setTimeout(() => {
