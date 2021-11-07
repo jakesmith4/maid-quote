@@ -126,16 +126,45 @@ small {
   font-size: 1.5rem;
 }
 
-.amount .hours-green {
-  color: green !important;
+.toggle-btn button {
+  background: transparent;
+  border: transparent;
 }
 
-/* .amount .hours {
-  color: black !important;
-} */
+.toggle-btn i {
+  font-size: 1.5rem;
+}
 
-.amount .hours-red {
-  color: red !important;
+.lock-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.unlock {
+  display: block;
+  color: green;
+  cursor: pointer;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.toggle-red {
+  color: red;
+}
+
+.scale-change {
+  background: green;
+  cursor: pointer;
+}
+
+.cursur-default {
+  cursor: default;
 }
 
 .amount h5 {
@@ -152,11 +181,6 @@ small {
   font-size: 1rem;
   padding: 0 0.2rem;
   border-color: #fff;
-  cursor: pointer;
-}
-
-.scale-change {
-  background: green;
 }
 
 @media screen and (min-width: 576px) {
