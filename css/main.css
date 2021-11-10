@@ -381,6 +381,7 @@ small {
   background: #e16162;
   border: 2px solid #fffffe;
   border-radius: 0.25rem;
+  padding: 1rem;
 }
 
 #options {
@@ -412,8 +413,7 @@ small {
   margin: 1rem auto;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  outline: 2px solid #fffffe;
-  outline-offset: 3px;
+  border: 2px solid #004643;
 }
 
 .amount h2 {

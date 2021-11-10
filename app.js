@@ -75,8 +75,8 @@ scaleMonthly.addEventListener('change', () => {
   console.log(scaleValueNumMinus);
 
   if (scaleValueNum === 0) {
-    amountHours[4].style.color = 'green';
-    scaleChange[4].style.background = 'green';
+    amountHours[4].style.color = '#004643';
+    scaleChange[4].style.background = '#004643';
   }
 
   if (scaleValueNum > 0) {
@@ -93,9 +93,9 @@ scaleMonthly.addEventListener('change', () => {
   hChange[4].textContent = 'Hours Changed';
 
   if (scaleValue === '0') {
-    amountHours[4].style.color = 'green';
-    scaleChange[4].style.background = 'green';
-    hChange[4].style.color = 'green';
+    amountHours[4].style.color = '#004643';
+    scaleChange[4].style.background = '#004643';
+    hChange[4].style.color = '#004643';
     hChange[4].textContent = 'Change Hours';
   }
 
@@ -213,8 +213,8 @@ scaleBiWeekly.addEventListener('change', () => {
   const scaleValueNumMinus = parseFloat(scaleValue);
 
   if (scaleValueNum === 0) {
-    amountHours[3].style.color = 'green';
-    scaleChange[3].style.background = 'green';
+    amountHours[3].style.color = '#004643';
+    scaleChange[3].style.background = '#004643';
   }
 
   if (scaleValueNum > 0) {
@@ -231,9 +231,9 @@ scaleBiWeekly.addEventListener('change', () => {
   hChange[3].textContent = 'Hours Changed';
 
   if (scaleValue === '0') {
-    amountHours[3].style.color = 'green';
-    scaleChange[3].style.background = 'green';
-    hChange[3].style.color = 'green';
+    amountHours[3].style.color = '#004643';
+    scaleChange[3].style.background = '#004643';
+    hChange[3].style.color = '#004643';
     hChange[3].textContent = 'Change Hours';
   }
 
@@ -364,8 +364,8 @@ scaleWeekly.addEventListener('change', () => {
   console.log(scaleValueNumMinus);
 
   if (scaleValueNum === 0) {
-    amountHours[2].style.color = 'green';
-    scaleChange[2].style.background = 'green';
+    amountHours[2].style.color = '#004643';
+    scaleChange[2].style.background = '#004643';
   }
 
   if (scaleValueNum > 0) {
@@ -382,9 +382,9 @@ scaleWeekly.addEventListener('change', () => {
   hChange[2].textContent = 'Hours Changed';
 
   if (scaleValue === '0') {
-    amountHours[2].style.color = 'green';
-    scaleChange[2].style.background = 'green';
-    hChange[2].style.color = 'green';
+    amountHours[2].style.color = '#004643';
+    scaleChange[2].style.background = '#004643';
+    hChange[2].style.color = '#004643';
     hChange[2].textContent = 'Change Hours';
   }
 
@@ -502,8 +502,8 @@ scaleGeneral.addEventListener('change', () => {
   const scaleValueNumMinus = parseFloat(scaleValue);
 
   if (scaleValueNum === 0) {
-    amountHours[1].style.color = 'green';
-    scaleChange[1].style.background = 'green';
+    amountHours[1].style.color = '#004643';
+    scaleChange[1].style.background = '#004643';
   }
 
   if (scaleValueNum > 0) {
@@ -520,9 +520,9 @@ scaleGeneral.addEventListener('change', () => {
   hChange[1].textContent = 'Hours Changed';
 
   if (scaleValue === '0') {
-    amountHours[1].style.color = 'green';
-    scaleChange[1].style.background = 'green';
-    hChange[1].style.color = 'green';
+    amountHours[1].style.color = '#004643';
+    scaleChange[1].style.background = '#004643';
+    hChange[1].style.color = '#004643';
     hChange[1].textContent = 'Change Hours';
   }
 
@@ -646,8 +646,8 @@ scale.addEventListener('change', () => {
   const scaleValueNumMinus = parseFloat(scaleValue);
 
   if (scaleValueNum === 0) {
-    amountHours[0].style.color = 'green';
-    scaleChange[0].style.background = 'green';
+    amountHours[0].style.color = '#004643';
+    scaleChange[0].style.background = '#004643';
   }
 
   if (scaleValueNum > 0) {
@@ -664,9 +664,9 @@ scale.addEventListener('change', () => {
   hChange[0].textContent = 'Hours Changed';
 
   if (scaleValue === '0') {
-    amountHours[0].style.color = 'green';
-    scaleChange[0].style.background = 'green';
-    hChange[0].style.color = 'green';
+    amountHours[0].style.color = '#004643';
+    scaleChange[0].style.background = '#004643';
+    hChange[0].style.color = '#004643';
     hChange[0].textContent = 'Change Hours';
   }
 
@@ -5676,13 +5676,13 @@ select.addEventListener('change', () => {
   spinner.style.display = 'block';
   displayOptions.style.display = 'none';
   amountHours.forEach((item) => {
-    item.style.color = 'green';
+    item.style.color = '#004643';
   });
   scaleChange.forEach((item) => {
-    item.style.background = 'green';
+    item.style.background = '#004643';
   });
   hChange.forEach((item) => {
-    item.style.color = 'green';
+    item.style.color = '#004643';
     item.textContent = 'Change Hours';
   });
 
