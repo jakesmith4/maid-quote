@@ -1,25 +1,312 @@
 *,
 ::before,
 ::after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  line-height: 1.5;
+/* Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Raleway&display=swap');
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+:root {
+  /* Primary Colors */
+  --primary-100: #d0f5df;
+  --primary-200: #a1ebbf;
+  --primary-300: #72e0a0;
+  --primary-400: #43d680;
+  --primary-500: #14cc60;
+  --primary-600: #10a34d;
+  --primary-700: #0c7a3a;
+  --primary-800: #085226;
+  --primary-900: #042913;
+  /* Grey Colors */
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+  /* Fonts */
+  --headingFont: 'Raleway', sans-serif;
+  --bodyFont: 'Nunito Sans', sans-serif;
+  --smallText: 0.8rem;
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  /* Rest Of Vars */
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: all 0.3s ease-in-out;
+  --maxWidth: 1170px;
+  --fixedWidth: 600px;
+  /* Box Shadow */
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+body {
+  /* background: var(--backgroundColor); */
+  background: #004643;
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  /* color: var(--textColor); */
+  color: #abd1c6;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  max-width: 40rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+  color: #fffffe;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 2.7rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.25rem;
+  }
+  h4 {
+    font-size: 1.75rem;
+  }
+}
+
+small,
+.text-small {
+  font-size: var(--smallText);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* img:not(){
+} */
+
+/* Section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--maxWidth);
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  color: var(--white);
+  background: var(--primary-500);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--primary-700);
+  box-shadow: var(--shadow-3);
+}
+
+.btn-hipster {
+  color: var(--primary-500);
+  background: var(--primary-200);
+}
+
+.btn-hipster:hover {
+  color: var(--primary-500);
+  background: var(--primary-700);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Alerts */
+.alert {
+  padding: 0.375rem 0.75rem;
+  border-color: transparent;
+  border-radius: var(--borderRadius);
+}
+
+.alert-danger {
+  color: var(--red-dark);
+  background: var(--red-light);
+}
+
+.alert-success {
+  color: var(--green-dark);
+  background: var(--green-light);
+}
+
+/* Form */
+.form {
+  width: 90vw;
+  max-width: var(--fixedWidth);
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  margin: 3rem auto;
+}
+
+.form-label {
+  display: block;
+  font-size: var(--smallText);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--borderRadius);
+  background: var(--backgroundColor);
+  border: 1px solid var(--grey-200);
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-textarea {
+  height: 7rem;
+}
+
+::placeholder {
+  font-family: inherit;
+  color: var(--grey-400);
+}
+
+.form-alert {
+  color: var(--red-dark);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+}
+
+/* Loading Spinner */
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 8rem;
+  height: 8rem;
+  border: 5px solid var(--grey-400);
+  border-radius: 50%;
+  border-top-color: #f9bc60;
+  animation: spinner 0.6s linear infinite;
+}
+
+.loading {
+  margin: 3rem auto 0;
+}
+
+/* Title */
 .section-title {
   text-align: center;
 }
 
-h1 {
+.section-title h2 {
+  margin-bottom: 0.25rem;
+}
+
+.underline {
+  background: var(--primary-500);
+  width: 7rem;
+  height: 0.25rem;
+  margin: 0 auto;
+}
+
+/* Maid Quote CSS */
+.section-title h1 {
   text-align: center;
   margin-top: 2rem;
   letter-spacing: 2px;
   text-transform: capitalize;
-  margin-bottom: -10px;
+  margin-bottom: -8px;
+  line-height: 1;
 }
 
 small {
@@ -28,25 +315,46 @@ small {
   font-size: 1rem;
   letter-spacing: 2px;
   font-weight: bold;
+  font-style: italic;
+  color: #f9bc60;
 }
 
 .underline {
   width: 5rem;
   height: 2px;
-  background: #222;
-  margin: 0 auto 3rem;
+  background: #f9bc60;
 }
 
-.hours-container {
-  margin-bottom: 0.5rem;
+.cleaning-cost-heading {
+  margin-bottom: 0.4rem;
+}
+
+.quote-text {
+  margin: 0 auto 2rem;
+  max-width: 350px;
+  font-size: 1.15rem;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+
+.box-heading {
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-style: italic;
 }
 
 #hours {
   width: 80px;
   letter-spacing: 1px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 0 0.2rem;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  font-style: italic;
+  background: #f9bc60;
+  color: #001e1d;
+  border: none;
+  text-indent: 2px;
 }
 
 .rate-container {
@@ -56,43 +364,42 @@ small {
 #tax-rate {
   width: 80px;
   letter-spacing: 1px;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 0 0.2rem;
+  background: #f9bc60;
+  padding: 0.2rem;
+  border: none;
+  color: #001e1d;
+  font-style: italic;
+  text-indent: 2px;
 }
 
 .select-box {
-  width: 85vw;
-  max-width: 1170px;
+  width: 90vw;
   margin: 0 auto 4rem;
   text-align: center;
-  background: rgb(202, 202, 202);
-  background: #fff;
-  border: 2px solid #222;
+  background: #e16162;
+  border: 2px solid #fffffe;
   border-radius: 0.25rem;
 }
 
 #options {
-  width: 80%;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
-  font-weight: bold;
+  font-style: italic;
   height: 2.5rem;
   cursor: pointer;
-  color: green;
-}
-
-.hours-container input {
-  color: green;
-}
-
-.rate-container input {
-  color: green;
+  color: #001e1d;
+  background: #f9bc60;
+  border: none;
 }
 
 .loading-spinner {
   display: none;
+  width: 225px;
+  height: 225px;
+  margin: 0 auto;
 }
 
 .display-options {
@@ -100,13 +407,29 @@ small {
 }
 
 .amount {
-  background: rgb(199, 195, 195);
+  background: #abd1c6;
   width: 75%;
   margin: 1rem auto;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  outline: 2px solid rgb(199, 195, 195);
-  outline-offset: 2.1px;
+  outline: 2px solid #fffffe;
+  outline-offset: 3px;
+}
+
+.amount h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-style: italic;
+  color: #fffffe;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 800px) {
+  .amount h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
 }
 
 .amount h3 {
@@ -117,6 +440,8 @@ small {
 .amount h4 {
   letter-spacing: 1px;
   font-size: 1.1rem;
+  margin: 0;
+  font-weight: bold;
 }
 
 .amount p {
@@ -124,6 +449,7 @@ small {
   color: green;
   font-weight: bold;
   font-size: 1.5rem;
+  margin: 0;
 }
 
 .toggle-btn button {
@@ -144,6 +470,10 @@ small {
   display: block;
   color: green;
   cursor: pointer;
+}
+
+.h-change {
+  font-weight: bold;
 }
 
 .display-block {

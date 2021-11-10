@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css" />
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="./css/normalize.css" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Maid Caculator</title>
+    <title>Maid Quote Calculator</title>
   </head>
   <body>
     <div class="section-title">
-      <h1>maid quote</h1>
+      <h1>maid quote calculator</h1>
       <small>quote master</small>
       <div class="underline"></div>
+      <h4 class="cleaning-cost-heading">House Cleaning Cost Calculator</h4>
+      <p class="quote-text">
+        How much does house cleaning services cost? Use the calculator below to
+        find out.
+      </p>
     </div>
 
     <div class="select-box">
       <form>
-        <h2>Square Footage</h2>
+        <h3 class="box-heading">Square Footage</h3>
         <select name="options" id="options">
           <option disabled selected value>-- Select An Option --</option>
           <option>1000-1500</option>
@@ -34,7 +41,7 @@
           <option>4400-4600</option>
           <option>4800-5000</option>
         </select>
-        <h2>Amount Per Hour</h2>
+        <h3 class="box-heading">Amount Per Hour</h3>
         <div class="hours-container">
           <input
             type="number"
@@ -45,7 +52,7 @@
             step="any"
           />
         </div>
-        <h2>Tax Rate</h2>
+        <h3 class="box-heading">Tax Rate</h3>
         <div class="rate-container">
           <input
             type="number"
@@ -59,12 +66,16 @@
       </form>
       <!-- Loading Spinner -->
       <div class="loading-spinner">
-        <img src="./img/loading.gif" alt="Loading Spinner" />
+        <!-- <img src="./img/loading.gif" alt="Loading Spinner" /> -->
+        <div class="loading"></div>
       </div>
       <!-- End Of Loading Spinner -->
       <div class="display-options">
         <div class="amount">
-          <h2>Deep Clean</h2>
+          <h2>
+            Deep Clean
+            <div class="underline"></div>
+          </h2>
           <h4>Price</h4>
           <p class="deep">$$</p>
           <h4>Hours</h4>
@@ -113,7 +124,10 @@
           </select>
         </div>
         <div class="amount">
-          <h2>General Clean</h2>
+          <h2>
+            General Clean
+            <div class="underline"></div>
+          </h2>
           <h4>Price</h4>
           <p class="general">$$</p>
           <h4>Hours</h4>
@@ -148,7 +162,10 @@
           </select>
         </div>
         <div class="amount">
-          <h2>Weekly</h2>
+          <h2>
+            Weekly
+            <div class="underline"></div>
+          </h2>
           <h4>Price</h4>
           <p class="weekly">$$</p>
           <h4>Hours</h4>
@@ -181,7 +198,10 @@
           </select>
         </div>
         <div class="amount">
-          <h2>Bi-weekly</h2>
+          <h2>
+            Bi-weekly
+            <div class="underline"></div>
+          </h2>
           <h4>Price</h4>
           <p class="bi-weekly">$$</p>
           <h4>Hours</h4>
@@ -214,7 +234,10 @@
           </select>
         </div>
         <div class="amount">
-          <h2>Monthly</h2>
+          <h2>
+            Monthly
+            <div class="underline"></div>
+          </h2>
           <h4>Price</h4>
           <p class="monthly">$$</p>
           <h4>Hours</h4>
