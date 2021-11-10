@@ -12,282 +12,307 @@
     <title>Maid Quote Calculator</title>
   </head>
   <body>
-    <div class="section-title">
-      <h1>
-        maid quote <br />
-        calculator
-      </h1>
-      <small>quote master</small>
-      <div class="underline"></div>
-      <h4 class="cleaning-cost-heading">House Cleaning Cost Calculator</h4>
-      <p class="quote-text">
-        How much does house cleaning services cost? Use the calculator below to
-        find out.
-      </p>
-    </div>
-
-    <div class="select-box">
-      <form>
-        <h3 class="box-heading">Square Footage</h3>
-        <select name="options" id="options">
-          <option disabled selected value>-- Select An Option --</option>
-          <option>1000-1500</option>
-          <option>1600-2000</option>
-          <option>2100-2200</option>
-          <option>2300-2500</option>
-          <option>2600-2800</option>
-          <option>2900-3100</option>
-          <option>3200-3400</option>
-          <option>3500-3700</option>
-          <option>3800-4000</option>
-          <option>4100-4300</option>
-          <option>4400-4600</option>
-          <option>4800-5000</option>
-        </select>
-        <h3 class="box-heading">Amount Per Hour</h3>
-        <div class="hours-container">
-          <input
-            type="number"
-            name="hours"
-            id="hours"
-            min="0"
-            value="38"
-            step="any"
-          />
-        </div>
-        <h3 class="box-heading">Tax Rate</h3>
-        <div class="rate-container">
-          <input
-            type="number"
-            name="hours"
-            id="tax-rate"
-            min="0"
-            value="0"
-            step="0.01"
-          />
-        </div>
-      </form>
-      <!-- Loading Spinner -->
-      <div class="loading-spinner">
-        <!-- <img src="./img/loading.gif" alt="Loading Spinner" /> -->
-        <div class="loading"></div>
+    <header class="section header">
+      <div class="section-title">
+        <h1>
+          maid quote <br />
+          calculator
+        </h1>
+        <small>quote master</small>
+        <div class="underline"></div>
+        <h4 class="cleaning-cost-heading">House Cleaning Cost Calculator</h4>
+        <p class="quote-text">
+          How much does house cleaning services cost? Use the calculator below
+          to find out.
+        </p>
       </div>
-      <!-- End Of Loading Spinner -->
-      <div class="display-options">
-        <div class="amount">
-          <h2>
-            Deep Clean
-            <div class="underline"></div>
-          </h2>
-          <h4>Price</h4>
-          <p class="deep">$$</p>
-          <h4>Hours</h4>
-          <p class="hours deep-hours">0</p>
-          <a class="toggle-btn" href="#">
-            <button>
-              <i class="fas fa-lock lock-icon lock"></i>
-              <i class="fas fa-unlock-alt unlock"></i>
-            </button>
-          </a>
-          <h5 class="h-change">Change Hours</h5>
-          <select name="scale" id="scale" class="scale-deep scale-change">
-            <option>-4</option>
-            <option>-3.75</option>
-            <option>-3.50</option>
-            <option>-3.25</option>
-            <option>-3</option>
-            <option>-2.75</option>
-            <option>-2.50</option>
-            <option>-2.25</option>
-            <option>-2</option>
-            <option>-1.75</option>
-            <option>-1.50</option>
-            <option>-1.25</option>
-            <option>-1</option>
-            <option>-.75</option>
-            <option>-.50</option>
-            <option>-.25</option>
-            <option selected>0</option>
-            <option>+.25</option>
-            <option>+.50</option>
-            <option>+.75</option>
-            <option>+1</option>
-            <option>+1.25</option>
-            <option>+1.50</option>
-            <option>+1.75</option>
-            <option>+2</option>
-            <option>+2.25</option>
-            <option>+2.50</option>
-            <option>+2.75</option>
-            <option>+3</option>
-            <option>+3.25</option>
-            <option>+3.50</option>
-            <option>+3.75</option>
-            <option>+4</option>
+
+      <div class="select-box">
+        <form>
+          <h3 class="box-heading">Square Footage</h3>
+          <select name="options" id="options">
+            <option disabled selected value>-- Select An Option --</option>
+            <option>1000-1500</option>
+            <option>1600-2000</option>
+            <option>2100-2200</option>
+            <option>2300-2500</option>
+            <option>2600-2800</option>
+            <option>2900-3100</option>
+            <option>3200-3400</option>
+            <option>3500-3700</option>
+            <option>3800-4000</option>
+            <option>4100-4300</option>
+            <option>4400-4600</option>
+            <option>4800-5000</option>
           </select>
+          <h3 class="box-heading">Amount Per Hour</h3>
+          <div class="hours-container">
+            <input
+              type="number"
+              name="hours"
+              id="hours"
+              min="0"
+              value="38"
+              step="any"
+            />
+          </div>
+          <h3 class="box-heading">Tax Rate</h3>
+          <div class="rate-container">
+            <input
+              type="number"
+              name="hours"
+              id="tax-rate"
+              min="0"
+              value="0"
+              step="0.01"
+            />
+          </div>
+        </form>
+        <!-- Loading Spinner -->
+        <div class="loading-spinner">
+          <!-- <img src="./img/loading.gif" alt="Loading Spinner" /> -->
+          <div class="loading"></div>
         </div>
-        <div class="amount">
-          <h2>
-            General Clean
-            <div class="underline"></div>
-          </h2>
-          <h4>Price</h4>
-          <p class="general">$$</p>
-          <h4>Hours</h4>
-          <p class="hours general-hours">0</p>
-          <a class="toggle-btn" href="#">
-            <button>
-              <i class="fas fa-lock lock-icon lock"></i>
-              <i class="fas fa-unlock-alt unlock"></i>
-            </button>
-          </a>
-          <h5 class="h-change">Change Hours</h5>
-          <select name="scale" id="scale" class="scale-general scale-change">
-            <option>-2.25</option>
-            <option>-2</option>
-            <option>-1.75</option>
-            <option>-1.50</option>
-            <option>-1.25</option>
-            <option>-1</option>
-            <option>-.75</option>
-            <option>-.50</option>
-            <option>-.25</option>
-            <option selected>0</option>
-            <option>+.25</option>
-            <option>+.50</option>
-            <option>+.75</option>
-            <option>+1</option>
-            <option>+1.25</option>
-            <option>+1.50</option>
-            <option>+1.75</option>
-            <option>+2</option>
-            <option>+2.25</option>
-          </select>
-        </div>
-        <div class="amount">
-          <h2>
-            Weekly
-            <div class="underline"></div>
-          </h2>
-          <h4>Price</h4>
-          <p class="weekly">$$</p>
-          <h4>Hours</h4>
-          <p class="hours weekly-hours">0</p>
-          <a class="toggle-btn" href="#">
-            <button>
-              <i class="fas fa-lock lock-icon lock"></i>
-              <i class="fas fa-unlock-alt unlock"></i>
-            </button>
-          </a>
-          <h5 class="h-change">Change Hours</h5>
-          <select name="scale" id="scale" class="scale-weekly scale-change">
-            <option>-2</option>
-            <option>-1.75</option>
-            <option>-1.50</option>
-            <option>-1.25</option>
-            <option>-1</option>
-            <option>-.75</option>
-            <option>-.50</option>
-            <option>-.25</option>
-            <option selected>0</option>
-            <option>+.25</option>
-            <option>+.50</option>
-            <option>+.75</option>
-            <option>+1</option>
-            <option>+1.25</option>
-            <option>+1.50</option>
-            <option>+1.75</option>
-            <option>+2</option>
-          </select>
-        </div>
-        <div class="amount">
-          <h2>
-            Bi-weekly
-            <div class="underline"></div>
-          </h2>
-          <h4>Price</h4>
-          <p class="bi-weekly">$$</p>
-          <h4>Hours</h4>
-          <p class="hours bi-weekly-hours">0</p>
-          <a class="toggle-btn" href="#">
-            <button>
-              <i class="fas fa-lock lock-icon lock"></i>
-              <i class="fas fa-unlock-alt unlock"></i>
-            </button>
-          </a>
-          <h5 class="h-change">Change Hours</h5>
-          <select name="scale" id="scale" class="scale-bi-weekly scale-change">
-            <option>-2</option>
-            <option>-1.75</option>
-            <option>-1.50</option>
-            <option>-1.25</option>
-            <option>-1</option>
-            <option>-.75</option>
-            <option>-.50</option>
-            <option>-.25</option>
-            <option selected>0</option>
-            <option>+.25</option>
-            <option>+.50</option>
-            <option>+.75</option>
-            <option>+1</option>
-            <option>+1.25</option>
-            <option>+1.50</option>
-            <option>+1.75</option>
-            <option>+2</option>
-          </select>
-        </div>
-        <div class="amount">
-          <h2>
-            Monthly
-            <div class="underline"></div>
-          </h2>
-          <h4>Price</h4>
-          <p class="monthly">$$</p>
-          <h4>Hours</h4>
-          <p class="hours monthly-hours">0</p>
-          <a class="toggle-btn" href="#">
-            <button>
-              <i class="fas fa-lock lock-icon lock"></i>
-              <i class="fas fa-unlock-alt unlock"></i>
-            </button>
-          </a>
-          <h5 class="h-change">Change Hours</h5>
-          <select name="scale" id="scale" class="scale-monthly scale-change">
-            <option>-2</option>
-            <option>-1.75</option>
-            <option>-1.50</option>
-            <option>-1.25</option>
-            <option>-1</option>
-            <option>-.75</option>
-            <option>-.50</option>
-            <option>-.25</option>
-            <option selected>0</option>
-            <option>+.25</option>
-            <option>+.50</option>
-            <option>+.75</option>
-            <option>+1</option>
-            <option>+1.25</option>
-            <option>+1.50</option>
-            <option>+1.75</option>
-            <option>+2</option>
-          </select>
+        <!-- End Of Loading Spinner -->
+        <div class="display-options">
+          <div class="amount">
+            <h2>
+              Deep Clean
+              <div class="underline"></div>
+            </h2>
+            <h4>Price</h4>
+            <p class="deep">$$</p>
+            <h4>Hours</h4>
+            <p class="hours deep-hours">0</p>
+            <a class="toggle-btn" href="#">
+              <button>
+                <i class="fas fa-lock lock-icon lock"></i>
+                <i class="fas fa-unlock-alt unlock"></i>
+              </button>
+            </a>
+            <h5 class="h-change">Change Hours</h5>
+            <select name="scale" id="scale" class="scale-deep scale-change">
+              <option>-4</option>
+              <option>-3.75</option>
+              <option>-3.50</option>
+              <option>-3.25</option>
+              <option>-3</option>
+              <option>-2.75</option>
+              <option>-2.50</option>
+              <option>-2.25</option>
+              <option>-2</option>
+              <option>-1.75</option>
+              <option>-1.50</option>
+              <option>-1.25</option>
+              <option>-1</option>
+              <option>-.75</option>
+              <option>-.50</option>
+              <option>-.25</option>
+              <option selected>0</option>
+              <option>+.25</option>
+              <option>+.50</option>
+              <option>+.75</option>
+              <option>+1</option>
+              <option>+1.25</option>
+              <option>+1.50</option>
+              <option>+1.75</option>
+              <option>+2</option>
+              <option>+2.25</option>
+              <option>+2.50</option>
+              <option>+2.75</option>
+              <option>+3</option>
+              <option>+3.25</option>
+              <option>+3.50</option>
+              <option>+3.75</option>
+              <option>+4</option>
+            </select>
+          </div>
+          <div class="amount">
+            <h2>
+              General Clean
+              <div class="underline"></div>
+            </h2>
+            <h4>Price</h4>
+            <p class="general">$$</p>
+            <h4>Hours</h4>
+            <p class="hours general-hours">0</p>
+            <a class="toggle-btn" href="#">
+              <button>
+                <i class="fas fa-lock lock-icon lock"></i>
+                <i class="fas fa-unlock-alt unlock"></i>
+              </button>
+            </a>
+            <h5 class="h-change">Change Hours</h5>
+            <select name="scale" id="scale" class="scale-general scale-change">
+              <option>-2.25</option>
+              <option>-2</option>
+              <option>-1.75</option>
+              <option>-1.50</option>
+              <option>-1.25</option>
+              <option>-1</option>
+              <option>-.75</option>
+              <option>-.50</option>
+              <option>-.25</option>
+              <option selected>0</option>
+              <option>+.25</option>
+              <option>+.50</option>
+              <option>+.75</option>
+              <option>+1</option>
+              <option>+1.25</option>
+              <option>+1.50</option>
+              <option>+1.75</option>
+              <option>+2</option>
+              <option>+2.25</option>
+            </select>
+          </div>
+          <div class="amount">
+            <h2>
+              Weekly
+              <div class="underline"></div>
+            </h2>
+            <h4>Price</h4>
+            <p class="weekly">$$</p>
+            <h4>Hours</h4>
+            <p class="hours weekly-hours">0</p>
+            <a class="toggle-btn" href="#">
+              <button>
+                <i class="fas fa-lock lock-icon lock"></i>
+                <i class="fas fa-unlock-alt unlock"></i>
+              </button>
+            </a>
+            <h5 class="h-change">Change Hours</h5>
+            <select name="scale" id="scale" class="scale-weekly scale-change">
+              <option>-2</option>
+              <option>-1.75</option>
+              <option>-1.50</option>
+              <option>-1.25</option>
+              <option>-1</option>
+              <option>-.75</option>
+              <option>-.50</option>
+              <option>-.25</option>
+              <option selected>0</option>
+              <option>+.25</option>
+              <option>+.50</option>
+              <option>+.75</option>
+              <option>+1</option>
+              <option>+1.25</option>
+              <option>+1.50</option>
+              <option>+1.75</option>
+              <option>+2</option>
+            </select>
+          </div>
+          <div class="amount">
+            <h2>
+              Bi-weekly
+              <div class="underline"></div>
+            </h2>
+            <h4>Price</h4>
+            <p class="bi-weekly">$$</p>
+            <h4>Hours</h4>
+            <p class="hours bi-weekly-hours">0</p>
+            <a class="toggle-btn" href="#">
+              <button>
+                <i class="fas fa-lock lock-icon lock"></i>
+                <i class="fas fa-unlock-alt unlock"></i>
+              </button>
+            </a>
+            <h5 class="h-change">Change Hours</h5>
+            <select
+              name="scale"
+              id="scale"
+              class="scale-bi-weekly scale-change"
+            >
+              <option>-2</option>
+              <option>-1.75</option>
+              <option>-1.50</option>
+              <option>-1.25</option>
+              <option>-1</option>
+              <option>-.75</option>
+              <option>-.50</option>
+              <option>-.25</option>
+              <option selected>0</option>
+              <option>+.25</option>
+              <option>+.50</option>
+              <option>+.75</option>
+              <option>+1</option>
+              <option>+1.25</option>
+              <option>+1.50</option>
+              <option>+1.75</option>
+              <option>+2</option>
+            </select>
+          </div>
+          <div class="amount">
+            <h2>
+              Monthly
+              <div class="underline"></div>
+            </h2>
+            <h4>Price</h4>
+            <p class="monthly">$$</p>
+            <h4>Hours</h4>
+            <p class="hours monthly-hours">0</p>
+            <a class="toggle-btn" href="#">
+              <button>
+                <i class="fas fa-lock lock-icon lock"></i>
+                <i class="fas fa-unlock-alt unlock"></i>
+              </button>
+            </a>
+            <h5 class="h-change">Change Hours</h5>
+            <select name="scale" id="scale" class="scale-monthly scale-change">
+              <option>-2</option>
+              <option>-1.75</option>
+              <option>-1.50</option>
+              <option>-1.25</option>
+              <option>-1</option>
+              <option>-.75</option>
+              <option>-.50</option>
+              <option>-.25</option>
+              <option selected>0</option>
+              <option>+.25</option>
+              <option>+.50</option>
+              <option>+.75</option>
+              <option>+1</option>
+              <option>+1.25</option>
+              <option>+1.50</option>
+              <option>+1.75</option>
+              <option>+2</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="section-title">
-      <h2>how does it work</h2>
-    </div>
-    <div class="section-center">
-      <p class="work-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eveniet
-        officiis repellendus quos. Aspernatur asperiores eligendi fugiat
-        repudiandae temporibus cumque. Enim facilis eius quas officia
-        dignissimos minus, fuga provident nostrum vero illo saepe explicabo rem
-        quisquam iure. Doloremque nostrum veritatis delectus et, omnis
-        laudantium placeat dolor? Distinctio veritatis cum error.
-      </p>
-    </div>
+      <div class="section-center">
+        <div class="section-title">
+          <h2>how does it work</h2>
+        </div>
+        <p class="work-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eveniet
+          officiis repellendus quos. Aspernatur asperiores eligendi fugiat
+          repudiandae temporibus cumque. Enim facilis eius quas officia
+          dignissimos minus, fuga provident nostrum vero illo saepe explicabo
+          rem quisquam iure. Doloremque nostrum veritatis delectus et, omnis
+          laudantium placeat dolor? Distinctio veritatis cum error.
+        </p>
+        <div class="section-title">
+          <h4>how much does house cleaning actually cost?</h4>
+          <p class="work-text">
+            The national average cost of house cleaning services is $40-$65 per
+            hour per cleaner.
+          </p>
+        </div>
+      </div>
+    </header>
+    <section class="section">
+      <div class="section-title">
+        <h2 class="cost-per">House cleaning cost per square foot:</h2>
+        <p class="work-text">
+          House cleaning companies can charge differently, but most charge by
+          the hour. It’s also common to see house cleaners charge by number of
+          bedrooms and bathrooms. Others charge by the square foot. Depending on
+          the service they are providing, a company may charge different rates
+          per square foot.
+        </p>
+      </div>
+    </section>
     <script src="./app.js"></script>
   </body>
 </html>

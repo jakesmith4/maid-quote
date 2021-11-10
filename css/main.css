@@ -62,8 +62,7 @@ html {
 }
 
 body {
-  /* background: var(--backgroundColor); */
-  background: #004643;
+  background: var(--backgroundColor);
   font-family: var(--bodyFont);
   font-weight: 400;
   line-height: 1.75;
@@ -300,9 +299,13 @@ img {
 }
 
 /* Maid Quote CSS */
+.header {
+  background: #004643;
+}
+
 .section-title h1 {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: -2rem;
   letter-spacing: 2px;
   text-transform: capitalize;
   margin-bottom: -8px;
@@ -411,9 +414,9 @@ small {
   background: #abd1c6;
   width: 75%;
   margin: 1rem auto;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   border-radius: 0.25rem;
-  border: 2px solid #004643;
+  border: 3px solid #004643;
 }
 
 .amount h2 {
@@ -427,7 +430,7 @@ small {
 
 @media screen and (min-width: 800px) {
   .amount h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: bold;
   }
 }
@@ -511,6 +514,22 @@ small {
   font-size: 1rem;
   padding: 0 0.2rem;
   border-color: #fff;
+}
+
+.work-text {
+  margin: 1rem auto;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 0 1rem;
+}
+
+/* 
+=====================
+Cost Per Square Foot
+=====================
+*/
+.cost-per {
+  color: #004643;
 }
 
 @media screen and (min-width: 576px) {
