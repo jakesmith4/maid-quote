@@ -538,8 +538,7 @@ Cost Per Square Foot
 
 table {
   margin: 0 auto;
-  max-width: 90vw;
-  width: 800px;
+  max-width: 1170px;
 }
 
 table,
@@ -552,7 +551,6 @@ td {
 
 th {
   color: #004643;
-  padding: 0.5rem;
   line-height: 1.4;
   background: var(--grey-200);
   letter-spacing: 1px;
@@ -560,6 +558,12 @@ th {
 
 th:nth-child(odd) {
   background: var(--grey-100);
+}
+
+@media screen and (min-width: 576px) {
+  th {
+    padding: 0.5rem;
+  }
 }
 
 td {
