@@ -532,6 +532,16 @@ Cost Per Square Foot
   color: #004643;
 }
 
+.house-text {
+  color: var(--grey-400);
+  font-style: italic;
+}
+
+.fourty {
+  color: #004643;
+  font-style: italic;
+}
+
 .table-container {
   overflow-x: scroll;
 }
