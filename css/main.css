@@ -532,6 +532,56 @@ Cost Per Square Foot
   color: #004643;
 }
 
+.table-container {
+  overflow-x: scroll;
+}
+
+table {
+  margin: 0 auto;
+  max-width: 90vw;
+  width: 800px;
+}
+
+table,
+th,
+td {
+  border: 2px solid var(--grey-400);
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  color: #004643;
+  padding: 0.5rem;
+  line-height: 1.4;
+  background: var(--grey-200);
+  letter-spacing: 1px;
+}
+
+th:nth-child(odd) {
+  background: var(--grey-100);
+}
+
+td {
+  background: var(--grey-200);
+  color: #f9bc60;
+  font-weight: bold;
+}
+
+td:nth-child(odd) {
+  background: var(--grey-100);
+}
+
+td:nth-of-type(1) {
+  font-weight: bold;
+  color: #004643;
+  letter-spacing: 1px;
+}
+
+td span {
+  color: #e16162;
+}
+
 @media screen and (min-width: 576px) {
   .display-options {
     grid-template-columns: repeat(2, 1fr);
