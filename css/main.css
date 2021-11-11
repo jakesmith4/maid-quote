@@ -596,6 +596,39 @@ td span {
   color: #e16162;
 }
 
+/* 
+==============
+Scope Of Work
+==============
+*/
+.scope {
+  background: var(--grey-300);
+}
+
+.section-title .scope-heading {
+  color: #004643;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.item h4 {
+  background: #f9bc60;
+  text-align: center;
+}
+
+.item p {
+  color: #e16162;
+  letter-spacing: 1px;
+  padding: 0.5rem 2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .scope-center {
+    display: flex;
+    gap: 0 2rem;
+  }
+}
+
 @media screen and (min-width: 576px) {
   .display-options {
     grid-template-columns: repeat(2, 1fr);
