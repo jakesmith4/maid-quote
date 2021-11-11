@@ -312,7 +312,7 @@ img {
 .maid-quote-icon {
   height: 100vh;
   justify-content: center;
-  margin-top: 9rem;
+  margin-top: 5rem;
 }
 
 .maid-quote-icon img {
@@ -320,7 +320,7 @@ img {
 }
 
 .maid-quote-icon::before {
-  content: 'Maid Quote Calculator';
+  content: 'Maid Quote';
   font-size: 3rem;
   color: #8dc63f;
   font-style: italic;
