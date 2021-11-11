@@ -303,18 +303,18 @@ img {
   background: #fff;
 }
 
+@media screen and (min-width: 576px) {
+  .maid-quote-container {
+    display: none !important;
+  }
+}
+
 .maid-quote-icon {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-}
-
-@media screen and (min-width: 576px) {
-  .maid-quote-container {
-    display: none !important;
-  }
 }
 
 .maid-quote-icon img {
@@ -327,7 +327,7 @@ img {
   color: #8dc63f;
   font-style: italic;
   position: absolute;
-  top: 0;
+  top: 20px;
 }
 
 .header {

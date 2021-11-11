@@ -22,764 +22,754 @@
         <img src="./img/maid-quote-min.png" alt="Maid Quote" />
       </div>
     </div>
-    <div class="document-select">
-      <header class="section header">
-        <div class="section-title">
-          <h1>
-            maid quote <br />
-            calculator
-          </h1>
-          <small>quote master</small>
-          <div class="underline"></div>
-          <h4 class="cleaning-cost-heading">House Cleaning Cost Calculator</h4>
-          <p class="quote-text">
-            How much does house cleaning services cost? Use the calculator below
-            to find out.
-          </p>
-        </div>
+    <header class="section header">
+      <div class="section-title">
+        <h1>
+          maid quote <br />
+          calculator
+        </h1>
+        <small>quote master</small>
+        <div class="underline"></div>
+        <h4 class="cleaning-cost-heading">House Cleaning Cost Calculator</h4>
+        <p class="quote-text">
+          How much does house cleaning services cost? Use the calculator below
+          to find out.
+        </p>
+      </div>
 
-        <div class="select-box">
-          <form>
-            <h3 class="box-heading">Square Footage</h3>
-            <select name="options" id="options">
-              <option disabled selected value>-- Select An Option --</option>
-              <option>1000-1500</option>
-              <option>1600-2000</option>
-              <option>2100-2200</option>
-              <option>2300-2500</option>
-              <option>2600-2800</option>
-              <option>2900-3100</option>
-              <option>3200-3400</option>
-              <option>3500-3700</option>
-              <option>3800-4000</option>
-              <option>4100-4300</option>
-              <option>4400-4600</option>
-              <option>4800-5000</option>
+      <div class="select-box">
+        <form>
+          <h3 class="box-heading">Square Footage</h3>
+          <select name="options" id="options">
+            <option disabled selected value>-- Select An Option --</option>
+            <option>1000-1500</option>
+            <option>1600-2000</option>
+            <option>2100-2200</option>
+            <option>2300-2500</option>
+            <option>2600-2800</option>
+            <option>2900-3100</option>
+            <option>3200-3400</option>
+            <option>3500-3700</option>
+            <option>3800-4000</option>
+            <option>4100-4300</option>
+            <option>4400-4600</option>
+            <option>4800-5000</option>
+          </select>
+          <h3 class="box-heading">Amount Per Hour</h3>
+          <div class="hours-container">
+            <input
+              type="number"
+              name="hours"
+              id="hours"
+              min="0"
+              value="38"
+              step="any"
+            />
+          </div>
+          <h3 class="box-heading">Tax Rate</h3>
+          <div class="rate-container">
+            <input
+              type="number"
+              name="hours"
+              id="tax-rate"
+              min="0"
+              value="0"
+              step="0.01"
+            />
+          </div>
+        </form>
+        <!-- Loading Spinner -->
+        <div class="loading-spinner">
+          <!-- <img src="./img/loading.gif" alt="Loading Spinner" /> -->
+          <div class="loading"></div>
+        </div>
+        <!-- End Of Loading Spinner -->
+        <div class="display-options">
+          <div class="amount">
+            <h2>
+              Deep Clean
+              <div class="underline"></div>
+            </h2>
+            <h4>Price</h4>
+            <p class="deep">$$</p>
+            <h4>Hours</h4>
+            <p class="hours deep-hours">0</p>
+            <a class="toggle-btn" href="#">
+              <button>
+                <i class="fas fa-lock lock-icon lock"></i>
+                <i class="fas fa-unlock-alt unlock"></i>
+              </button>
+            </a>
+            <h5 class="h-change">Change Hours</h5>
+            <select name="scale" id="scale" class="scale-deep scale-change">
+              <option>-4</option>
+              <option>-3.75</option>
+              <option>-3.50</option>
+              <option>-3.25</option>
+              <option>-3</option>
+              <option>-2.75</option>
+              <option>-2.50</option>
+              <option>-2.25</option>
+              <option>-2</option>
+              <option>-1.75</option>
+              <option>-1.50</option>
+              <option>-1.25</option>
+              <option>-1</option>
+              <option>-.75</option>
+              <option>-.50</option>
+              <option>-.25</option>
+              <option selected>0</option>
+              <option>+.25</option>
+              <option>+.50</option>
+              <option>+.75</option>
+              <option>+1</option>
+              <option>+1.25</option>
+              <option>+1.50</option>
+              <option>+1.75</option>
+              <option>+2</option>
+              <option>+2.25</option>
+              <option>+2.50</option>
+              <option>+2.75</option>
+              <option>+3</option>
+              <option>+3.25</option>
+              <option>+3.50</option>
+              <option>+3.75</option>
+              <option>+4</option>
             </select>
-            <h3 class="box-heading">Amount Per Hour</h3>
-            <div class="hours-container">
-              <input
-                type="number"
-                name="hours"
-                id="hours"
-                min="0"
-                value="38"
-                step="any"
-              />
-            </div>
-            <h3 class="box-heading">Tax Rate</h3>
-            <div class="rate-container">
-              <input
-                type="number"
-                name="hours"
-                id="tax-rate"
-                min="0"
-                value="0"
-                step="0.01"
-              />
-            </div>
-          </form>
-          <!-- Loading Spinner -->
-          <div class="loading-spinner">
-            <!-- <img src="./img/loading.gif" alt="Loading Spinner" /> -->
-            <div class="loading"></div>
           </div>
-          <!-- End Of Loading Spinner -->
-          <div class="display-options">
-            <div class="amount">
-              <h2>
-                Deep Clean
-                <div class="underline"></div>
-              </h2>
-              <h4>Price</h4>
-              <p class="deep">$$</p>
-              <h4>Hours</h4>
-              <p class="hours deep-hours">0</p>
-              <a class="toggle-btn" href="#">
-                <button>
-                  <i class="fas fa-lock lock-icon lock"></i>
-                  <i class="fas fa-unlock-alt unlock"></i>
-                </button>
-              </a>
-              <h5 class="h-change">Change Hours</h5>
-              <select name="scale" id="scale" class="scale-deep scale-change">
-                <option>-4</option>
-                <option>-3.75</option>
-                <option>-3.50</option>
-                <option>-3.25</option>
-                <option>-3</option>
-                <option>-2.75</option>
-                <option>-2.50</option>
-                <option>-2.25</option>
-                <option>-2</option>
-                <option>-1.75</option>
-                <option>-1.50</option>
-                <option>-1.25</option>
-                <option>-1</option>
-                <option>-.75</option>
-                <option>-.50</option>
-                <option>-.25</option>
-                <option selected>0</option>
-                <option>+.25</option>
-                <option>+.50</option>
-                <option>+.75</option>
-                <option>+1</option>
-                <option>+1.25</option>
-                <option>+1.50</option>
-                <option>+1.75</option>
-                <option>+2</option>
-                <option>+2.25</option>
-                <option>+2.50</option>
-                <option>+2.75</option>
-                <option>+3</option>
-                <option>+3.25</option>
-                <option>+3.50</option>
-                <option>+3.75</option>
-                <option>+4</option>
-              </select>
-            </div>
-            <div class="amount">
-              <h2>
-                General Clean
-                <div class="underline"></div>
-              </h2>
-              <h4>Price</h4>
-              <p class="general">$$</p>
-              <h4>Hours</h4>
-              <p class="hours general-hours">0</p>
-              <a class="toggle-btn" href="#">
-                <button>
-                  <i class="fas fa-lock lock-icon lock"></i>
-                  <i class="fas fa-unlock-alt unlock"></i>
-                </button>
-              </a>
-              <h5 class="h-change">Change Hours</h5>
-              <select
-                name="scale"
-                id="scale"
-                class="scale-general scale-change"
-              >
-                <option>-2.25</option>
-                <option>-2</option>
-                <option>-1.75</option>
-                <option>-1.50</option>
-                <option>-1.25</option>
-                <option>-1</option>
-                <option>-.75</option>
-                <option>-.50</option>
-                <option>-.25</option>
-                <option selected>0</option>
-                <option>+.25</option>
-                <option>+.50</option>
-                <option>+.75</option>
-                <option>+1</option>
-                <option>+1.25</option>
-                <option>+1.50</option>
-                <option>+1.75</option>
-                <option>+2</option>
-                <option>+2.25</option>
-              </select>
-            </div>
-            <div class="amount">
-              <h2>
-                Weekly
-                <div class="underline"></div>
-              </h2>
-              <h4>Price</h4>
-              <p class="weekly">$$</p>
-              <h4>Hours</h4>
-              <p class="hours weekly-hours">0</p>
-              <a class="toggle-btn" href="#">
-                <button>
-                  <i class="fas fa-lock lock-icon lock"></i>
-                  <i class="fas fa-unlock-alt unlock"></i>
-                </button>
-              </a>
-              <h5 class="h-change">Change Hours</h5>
-              <select name="scale" id="scale" class="scale-weekly scale-change">
-                <option>-2</option>
-                <option>-1.75</option>
-                <option>-1.50</option>
-                <option>-1.25</option>
-                <option>-1</option>
-                <option>-.75</option>
-                <option>-.50</option>
-                <option>-.25</option>
-                <option selected>0</option>
-                <option>+.25</option>
-                <option>+.50</option>
-                <option>+.75</option>
-                <option>+1</option>
-                <option>+1.25</option>
-                <option>+1.50</option>
-                <option>+1.75</option>
-                <option>+2</option>
-              </select>
-            </div>
-            <div class="amount">
-              <h2>
-                Bi-weekly
-                <div class="underline"></div>
-              </h2>
-              <h4>Price</h4>
-              <p class="bi-weekly">$$</p>
-              <h4>Hours</h4>
-              <p class="hours bi-weekly-hours">0</p>
-              <a class="toggle-btn" href="#">
-                <button>
-                  <i class="fas fa-lock lock-icon lock"></i>
-                  <i class="fas fa-unlock-alt unlock"></i>
-                </button>
-              </a>
-              <h5 class="h-change">Change Hours</h5>
-              <select
-                name="scale"
-                id="scale"
-                class="scale-bi-weekly scale-change"
-              >
-                <option>-2</option>
-                <option>-1.75</option>
-                <option>-1.50</option>
-                <option>-1.25</option>
-                <option>-1</option>
-                <option>-.75</option>
-                <option>-.50</option>
-                <option>-.25</option>
-                <option selected>0</option>
-                <option>+.25</option>
-                <option>+.50</option>
-                <option>+.75</option>
-                <option>+1</option>
-                <option>+1.25</option>
-                <option>+1.50</option>
-                <option>+1.75</option>
-                <option>+2</option>
-              </select>
-            </div>
-            <div class="amount">
-              <h2>
-                Monthly
-                <div class="underline"></div>
-              </h2>
-              <h4>Price</h4>
-              <p class="monthly">$$</p>
-              <h4>Hours</h4>
-              <p class="hours monthly-hours">0</p>
-              <a class="toggle-btn" href="#">
-                <button>
-                  <i class="fas fa-lock lock-icon lock"></i>
-                  <i class="fas fa-unlock-alt unlock"></i>
-                </button>
-              </a>
-              <h5 class="h-change">Change Hours</h5>
-              <select
-                name="scale"
-                id="scale"
-                class="scale-monthly scale-change"
-              >
-                <option>-2</option>
-                <option>-1.75</option>
-                <option>-1.50</option>
-                <option>-1.25</option>
-                <option>-1</option>
-                <option>-.75</option>
-                <option>-.50</option>
-                <option>-.25</option>
-                <option selected>0</option>
-                <option>+.25</option>
-                <option>+.50</option>
-                <option>+.75</option>
-                <option>+1</option>
-                <option>+1.25</option>
-                <option>+1.50</option>
-                <option>+1.75</option>
-                <option>+2</option>
-              </select>
-            </div>
+          <div class="amount">
+            <h2>
+              General Clean
+              <div class="underline"></div>
+            </h2>
+            <h4>Price</h4>
+            <p class="general">$$</p>
+            <h4>Hours</h4>
+            <p class="hours general-hours">0</p>
+            <a class="toggle-btn" href="#">
+              <button>
+                <i class="fas fa-lock lock-icon lock"></i>
+                <i class="fas fa-unlock-alt unlock"></i>
+              </button>
+            </a>
+            <h5 class="h-change">Change Hours</h5>
+            <select name="scale" id="scale" class="scale-general scale-change">
+              <option>-2.25</option>
+              <option>-2</option>
+              <option>-1.75</option>
+              <option>-1.50</option>
+              <option>-1.25</option>
+              <option>-1</option>
+              <option>-.75</option>
+              <option>-.50</option>
+              <option>-.25</option>
+              <option selected>0</option>
+              <option>+.25</option>
+              <option>+.50</option>
+              <option>+.75</option>
+              <option>+1</option>
+              <option>+1.25</option>
+              <option>+1.50</option>
+              <option>+1.75</option>
+              <option>+2</option>
+              <option>+2.25</option>
+            </select>
+          </div>
+          <div class="amount">
+            <h2>
+              Weekly
+              <div class="underline"></div>
+            </h2>
+            <h4>Price</h4>
+            <p class="weekly">$$</p>
+            <h4>Hours</h4>
+            <p class="hours weekly-hours">0</p>
+            <a class="toggle-btn" href="#">
+              <button>
+                <i class="fas fa-lock lock-icon lock"></i>
+                <i class="fas fa-unlock-alt unlock"></i>
+              </button>
+            </a>
+            <h5 class="h-change">Change Hours</h5>
+            <select name="scale" id="scale" class="scale-weekly scale-change">
+              <option>-2</option>
+              <option>-1.75</option>
+              <option>-1.50</option>
+              <option>-1.25</option>
+              <option>-1</option>
+              <option>-.75</option>
+              <option>-.50</option>
+              <option>-.25</option>
+              <option selected>0</option>
+              <option>+.25</option>
+              <option>+.50</option>
+              <option>+.75</option>
+              <option>+1</option>
+              <option>+1.25</option>
+              <option>+1.50</option>
+              <option>+1.75</option>
+              <option>+2</option>
+            </select>
+          </div>
+          <div class="amount">
+            <h2>
+              Bi-weekly
+              <div class="underline"></div>
+            </h2>
+            <h4>Price</h4>
+            <p class="bi-weekly">$$</p>
+            <h4>Hours</h4>
+            <p class="hours bi-weekly-hours">0</p>
+            <a class="toggle-btn" href="#">
+              <button>
+                <i class="fas fa-lock lock-icon lock"></i>
+                <i class="fas fa-unlock-alt unlock"></i>
+              </button>
+            </a>
+            <h5 class="h-change">Change Hours</h5>
+            <select
+              name="scale"
+              id="scale"
+              class="scale-bi-weekly scale-change"
+            >
+              <option>-2</option>
+              <option>-1.75</option>
+              <option>-1.50</option>
+              <option>-1.25</option>
+              <option>-1</option>
+              <option>-.75</option>
+              <option>-.50</option>
+              <option>-.25</option>
+              <option selected>0</option>
+              <option>+.25</option>
+              <option>+.50</option>
+              <option>+.75</option>
+              <option>+1</option>
+              <option>+1.25</option>
+              <option>+1.50</option>
+              <option>+1.75</option>
+              <option>+2</option>
+            </select>
+          </div>
+          <div class="amount">
+            <h2>
+              Monthly
+              <div class="underline"></div>
+            </h2>
+            <h4>Price</h4>
+            <p class="monthly">$$</p>
+            <h4>Hours</h4>
+            <p class="hours monthly-hours">0</p>
+            <a class="toggle-btn" href="#">
+              <button>
+                <i class="fas fa-lock lock-icon lock"></i>
+                <i class="fas fa-unlock-alt unlock"></i>
+              </button>
+            </a>
+            <h5 class="h-change">Change Hours</h5>
+            <select name="scale" id="scale" class="scale-monthly scale-change">
+              <option>-2</option>
+              <option>-1.75</option>
+              <option>-1.50</option>
+              <option>-1.25</option>
+              <option>-1</option>
+              <option>-.75</option>
+              <option>-.50</option>
+              <option>-.25</option>
+              <option selected>0</option>
+              <option>+.25</option>
+              <option>+.50</option>
+              <option>+.75</option>
+              <option>+1</option>
+              <option>+1.25</option>
+              <option>+1.50</option>
+              <option>+1.75</option>
+              <option>+2</option>
+            </select>
           </div>
         </div>
+      </div>
 
-        <div class="section-center">
-          <div class="section-title">
-            <h2>how does it work</h2>
-          </div>
-          <p class="work-text">
-            The calculator above works by choosing a square footage, an hourly
-            rate, and a tax rate. This calculates the amount of hours and cost
-            of a Deep Clean, General Clean, Weekly Service Rate, Bi-Weekly
-            Service Rate, and Monthly Service Rate. You can adjust the amount
-            per hour, or tax rate.
-          </p>
+      <div class="section-center">
+        <div class="section-title">
+          <h2>how does it work</h2>
+        </div>
+        <p class="work-text">
+          The calculator above works by choosing a square footage, an hourly
+          rate, and a tax rate. This calculates the amount of hours and cost of
+          a Deep Clean, General Clean, Weekly Service Rate, Bi-Weekly Service
+          Rate, and Monthly Service Rate. You can adjust the amount per hour, or
+          tax rate.
+        </p>
 
+        <p class="work-text">
+          You can also adjust the hours it takes to do a job by changing the
+          change hours option below the lock icon. Change the amount of hours it
+          takes to do a job and get an instant price quote. The lock icon lets
+          you lock in the rates you personaly charge, and generate that quote
+          based on the rate you locked in, every time! Maid Quote Calculator is
+          perfect for on the job quotes, or simply working in the office giving
+          quotes.
+        </p>
+        <div class="section-title">
+          <h4>how much does house cleaning actually cost?</h4>
           <p class="work-text">
-            You can also adjust the hours it takes to do a job by changing the
-            change hours option below the lock icon. Change the amount of hours
-            it takes to do a job and get an instant price quote. The lock icon
-            lets you lock in the rates you personaly charge, and generate that
-            quote based on the rate you locked in, every time! Maid Quote
-            Calculator is perfect for on the job quotes, or simply working in
-            the office giving quotes.
-          </p>
-          <div class="section-title">
-            <h4>how much does house cleaning actually cost?</h4>
-            <p class="work-text">
-              The national average cost of house cleaning services is $40-$65
-              per hour per cleaner.
-            </p>
-          </div>
-        </div>
-      </header>
-      <section class="section section-center">
-        <div class="section-title">
-          <h2 class="cost-per">House cleaning cost per square foot:</h2>
-          <p class="work-text house-text">
-            House cleaning companies can charge differently, but most charge by
-            the hour. It’s also common to see house cleaners charge by number of
-            bedrooms and bathrooms. Others charge by the square foot. Depending
-            on the service they are providing, a company may charge different
-            rates per square foot. The average price per square foot is $0.07 to
-            $0.12 per square foot. In the chart shown below we are charging $40
-            per hour with no tax added.
+            The national average cost of house cleaning services is $40-$65 per
+            hour per cleaner.
           </p>
         </div>
-        <div class="section-title">
-          <h3 class="fourty">$40 per hour</h3>
-        </div>
-        <div class="table-container">
-          <table>
-            <tr>
-              <th>Home Square Feet</th>
-              <th>Deep Clean</th>
-              <th>General Clean</th>
-              <th>Weekly</th>
-              <th>Bi-Weekly</th>
-              <th>Monthly</th>
-            </tr>
-            <tr>
-              <td>1000-1500</td>
-              <td>
-                $260
-                <br />
-                <span>6.5 hrs</span>
-              </td>
-              <td>
-                $160
-                <br />
-                <span>4 hrs</span>
-              </td>
-              <td>
-                $100
-                <br />
-                <span>2.5 hrs</span>
-              </td>
-              <td>
-                $120
-                <br />
-                <span>3 hrs</span>
-              </td>
-              <td>
-                $130
-                <br />
-                <span>3.25 hrs</span>
-              </td>
-            </tr>
-            <tr>
-              <td>1600-2000</td>
-              <td>
-                $320
-                <br />
-                <span>8 hrs</span>
-              </td>
-              <td>
-                $180
-                <br />
-                <span>4.5 hrs</span>
-              </td>
-              <td>
-                $120
-                <br />
-                <span>3 hrs</span>
-              </td>
-              <td>
-                $130
-                <br />
-                <span>3.25 hrs</span>
-              </td>
-              <td>
-                $140
-                <br />
-                <span>3.5 hrs</span>
-              </td>
-            </tr>
-            <tr>
-              <td>2100-2200</td>
-              <td>
-                $380
-                <br />
-                <span>9.5 hrs</span>
-              </td>
-              <td>
-                $200
-                <br />
-                <span>5 hrs</span>
-              </td>
-              <td>
-                $140
-                <br />
-                <span>3.5 hrs</span>
-              </td>
-              <td>
-                150
-                <br />
-                <span>3.75 hrs</span>
-              </td>
-              <td>
-                $160
-                <br />
-                <span>4 hrs hrs</span>
-              </td>
-            </tr>
-            <tr>
-              <td>2300-2500</td>
-              <td>
-                $420
-                <br />
-                <span>10.5 hrs</span>
-              </td>
-              <td>
-                220
-                <br />
-                <span>5.5 hrs</span>
-              </td>
-              <td>
-                150
-                <br />
-                <span>3.75 hrs</span>
-              </td>
-              <td>
-                $160
-                <br />
-                <span>4 hrs</span>
-              </td>
-              <td>
-                170
-                <br />
-                <span>4.25 hrs</span>
-              </td>
-            </tr>
-            <tr>
-              <td>2600-2800</td>
-              <td>
-                $460
-                <br />
-                <span>11.5 hrs </span>
-              </td>
-              <td>
-                $240
-                <br />
-                <span>6 hrs </span>
-              </td>
-              <td>
-                $160
-                <br />
-                <span>4 hrs </span>
-              </td>
-              <td>
-                170
-                <br />
-                <span>4.25 hrs </span>
-              </td>
-              <td>
-                $180
-                <br />
-                <span>4.5 hrs</span>
-              </td>
-            </tr>
-            <tr>
-              <td>2900-3100</td>
-              <td>
-                $500
-                <br />
-                <span> 12.5 hrs </span>
-              </td>
-              <td>
-                $260
-                <br />
-                <span> 6.5 hrs </span>
-              </td>
-              <td>
-                $170
-                <br />
-                <span> 4.25 hrs </span>
-              </td>
-              <td>
-                $180
-                <br />
-                <span> 4.5 hrs </span>
-              </td>
-              <td>
-                $190
-                <br />
-                <span> 4.75 hrs </span>
-              </td>
-            </tr>
-            <tr>
-              <td>3200-3400</td>
-              <td>
-                $540
-                <br />
-                <span> 13.5 hrs </span>
-              </td>
-              <td>
-                $280
-                <br />
-                <span> 7 hrs </span>
-              </td>
-              <td>
-                $180
-                <br />
-                <span> 4.5 hrs </span>
-              </td>
-              <td>
-                $190
-                <br />
-                <span> 4.75 hrs </span>
-              </td>
-              <td>
-                $200
-                <br />
-                <span> 5 hrs </span>
-              </td>
-            </tr>
-            <tr>
-              <td>3500-3700</td>
-              <td>
-                $580
-                <br />
-                <span> 14.5 hrs </span>
-              </td>
-              <td>
-                $300
-                <br />
-                <span> 7.5 hrs </span>
-              </td>
-              <td>
-                $190
-                <br />
-                <span> 4.75 hrs </span>
-              </td>
-              <td>
-                $200
-                <br />
-                <span> 5 hrs </span>
-              </td>
-              <td>
-                $210
-                <br />
-                <span> 5.25 hrs </span>
-              </td>
-            </tr>
-            <tr>
-              <td>3800-4000</td>
-              <td>
-                $620
-                <br />
-                <span> 15.5 hrs </span>
-              </td>
-              <td>
-                $320
-                <br />
-                <span> 8 hrs </span>
-              </td>
-              <td>
-                $200
-                <br />
-                <span> 5 hrs </span>
-              </td>
-              <td>
-                $210
-                <br />
-                <span> 5.25 hrs </span>
-              </td>
-              <td>
-                $220
-                <br />
-                <span> 5.5 hrs </span>
-              </td>
-            </tr>
-            <tr>
-              <td>4100-4300</td>
-              <td>
-                $660
-                <br />
-                <span> 16.5 hrs </span>
-              </td>
-              <td>
-                $340
-                <br />
-                <span> 8.5 hrs </span>
-              </td>
-              <td>
-                $210
-                <br />
-                <span> 5.25 hrs </span>
-              </td>
-              <td>
-                $220
-                <br />
-                <span> 5.5 hrs </span>
-              </td>
-              <td>
-                $230
-                <br />
-                <span> 5.75 hrs </span>
-              </td>
-            </tr>
-            <tr>
-              <td>4400-4600</td>
-              <td>
-                $700
-                <br />
-                <span> 17.5 hrs </span>
-              </td>
-              <td>
-                $360
-                <br />
-                <span> 9 hrs </span>
-              </td>
-              <td>
-                $220
-                <br />
-                <span> 5.5 hrs </span>
-              </td>
-              <td>
-                230
-                <br />
-                <span> 5.75 hrs</span>
-              </td>
-              <td>
-                $240
-                <br />
-                <span> 6 hrs </span>
-              </td>
-            </tr>
-            <tr>
-              <td>4800-5000</td>
-              <td>
-                $740
-                <br />
-                <span> 18.5 hrs </span>
-              </td>
-              <td>
-                $380
-                <br />
-                <span> 9.5 hrs </span>
-              </td>
-              <td>
-                $230
-                <br />
-                <span> 5.75 hrs </span>
-              </td>
-              <td>
-                $240
-                <br />
-                <span> 6 hrs </span>
-              </td>
-              <td>
-                $250
-                <br />
-                <span> 6.25 hrs </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </section>
-      <section class="section scope">
-        <div class="section-title">
-          <h2 class="scope-heading">
-            scope of work
+      </div>
+    </header>
+    <section class="section section-center">
+      <div class="section-title">
+        <h2 class="cost-per">House cleaning cost per square foot:</h2>
+        <p class="work-text house-text">
+          House cleaning companies can charge differently, but most charge by
+          the hour. It’s also common to see house cleaners charge by number of
+          bedrooms and bathrooms. Others charge by the square foot. Depending on
+          the service they are providing, a company may charge different rates
+          per square foot. The average price per square foot is $0.07 to $0.12
+          per square foot. In the chart shown below we are charging $40 per hour
+          with no tax added.
+        </p>
+      </div>
+      <div class="section-title">
+        <h3 class="fourty">$40 per hour</h3>
+      </div>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>Home Square Feet</th>
+            <th>Deep Clean</th>
+            <th>General Clean</th>
+            <th>Weekly</th>
+            <th>Bi-Weekly</th>
+            <th>Monthly</th>
+          </tr>
+          <tr>
+            <td>1000-1500</td>
+            <td>
+              $260
+              <br />
+              <span>6.5 hrs</span>
+            </td>
+            <td>
+              $160
+              <br />
+              <span>4 hrs</span>
+            </td>
+            <td>
+              $100
+              <br />
+              <span>2.5 hrs</span>
+            </td>
+            <td>
+              $120
+              <br />
+              <span>3 hrs</span>
+            </td>
+            <td>
+              $130
+              <br />
+              <span>3.25 hrs</span>
+            </td>
+          </tr>
+          <tr>
+            <td>1600-2000</td>
+            <td>
+              $320
+              <br />
+              <span>8 hrs</span>
+            </td>
+            <td>
+              $180
+              <br />
+              <span>4.5 hrs</span>
+            </td>
+            <td>
+              $120
+              <br />
+              <span>3 hrs</span>
+            </td>
+            <td>
+              $130
+              <br />
+              <span>3.25 hrs</span>
+            </td>
+            <td>
+              $140
+              <br />
+              <span>3.5 hrs</span>
+            </td>
+          </tr>
+          <tr>
+            <td>2100-2200</td>
+            <td>
+              $380
+              <br />
+              <span>9.5 hrs</span>
+            </td>
+            <td>
+              $200
+              <br />
+              <span>5 hrs</span>
+            </td>
+            <td>
+              $140
+              <br />
+              <span>3.5 hrs</span>
+            </td>
+            <td>
+              150
+              <br />
+              <span>3.75 hrs</span>
+            </td>
+            <td>
+              $160
+              <br />
+              <span>4 hrs hrs</span>
+            </td>
+          </tr>
+          <tr>
+            <td>2300-2500</td>
+            <td>
+              $420
+              <br />
+              <span>10.5 hrs</span>
+            </td>
+            <td>
+              220
+              <br />
+              <span>5.5 hrs</span>
+            </td>
+            <td>
+              150
+              <br />
+              <span>3.75 hrs</span>
+            </td>
+            <td>
+              $160
+              <br />
+              <span>4 hrs</span>
+            </td>
+            <td>
+              170
+              <br />
+              <span>4.25 hrs</span>
+            </td>
+          </tr>
+          <tr>
+            <td>2600-2800</td>
+            <td>
+              $460
+              <br />
+              <span>11.5 hrs </span>
+            </td>
+            <td>
+              $240
+              <br />
+              <span>6 hrs </span>
+            </td>
+            <td>
+              $160
+              <br />
+              <span>4 hrs </span>
+            </td>
+            <td>
+              170
+              <br />
+              <span>4.25 hrs </span>
+            </td>
+            <td>
+              $180
+              <br />
+              <span>4.5 hrs</span>
+            </td>
+          </tr>
+          <tr>
+            <td>2900-3100</td>
+            <td>
+              $500
+              <br />
+              <span> 12.5 hrs </span>
+            </td>
+            <td>
+              $260
+              <br />
+              <span> 6.5 hrs </span>
+            </td>
+            <td>
+              $170
+              <br />
+              <span> 4.25 hrs </span>
+            </td>
+            <td>
+              $180
+              <br />
+              <span> 4.5 hrs </span>
+            </td>
+            <td>
+              $190
+              <br />
+              <span> 4.75 hrs </span>
+            </td>
+          </tr>
+          <tr>
+            <td>3200-3400</td>
+            <td>
+              $540
+              <br />
+              <span> 13.5 hrs </span>
+            </td>
+            <td>
+              $280
+              <br />
+              <span> 7 hrs </span>
+            </td>
+            <td>
+              $180
+              <br />
+              <span> 4.5 hrs </span>
+            </td>
+            <td>
+              $190
+              <br />
+              <span> 4.75 hrs </span>
+            </td>
+            <td>
+              $200
+              <br />
+              <span> 5 hrs </span>
+            </td>
+          </tr>
+          <tr>
+            <td>3500-3700</td>
+            <td>
+              $580
+              <br />
+              <span> 14.5 hrs </span>
+            </td>
+            <td>
+              $300
+              <br />
+              <span> 7.5 hrs </span>
+            </td>
+            <td>
+              $190
+              <br />
+              <span> 4.75 hrs </span>
+            </td>
+            <td>
+              $200
+              <br />
+              <span> 5 hrs </span>
+            </td>
+            <td>
+              $210
+              <br />
+              <span> 5.25 hrs </span>
+            </td>
+          </tr>
+          <tr>
+            <td>3800-4000</td>
+            <td>
+              $620
+              <br />
+              <span> 15.5 hrs </span>
+            </td>
+            <td>
+              $320
+              <br />
+              <span> 8 hrs </span>
+            </td>
+            <td>
+              $200
+              <br />
+              <span> 5 hrs </span>
+            </td>
+            <td>
+              $210
+              <br />
+              <span> 5.25 hrs </span>
+            </td>
+            <td>
+              $220
+              <br />
+              <span> 5.5 hrs </span>
+            </td>
+          </tr>
+          <tr>
+            <td>4100-4300</td>
+            <td>
+              $660
+              <br />
+              <span> 16.5 hrs </span>
+            </td>
+            <td>
+              $340
+              <br />
+              <span> 8.5 hrs </span>
+            </td>
+            <td>
+              $210
+              <br />
+              <span> 5.25 hrs </span>
+            </td>
+            <td>
+              $220
+              <br />
+              <span> 5.5 hrs </span>
+            </td>
+            <td>
+              $230
+              <br />
+              <span> 5.75 hrs </span>
+            </td>
+          </tr>
+          <tr>
+            <td>4400-4600</td>
+            <td>
+              $700
+              <br />
+              <span> 17.5 hrs </span>
+            </td>
+            <td>
+              $360
+              <br />
+              <span> 9 hrs </span>
+            </td>
+            <td>
+              $220
+              <br />
+              <span> 5.5 hrs </span>
+            </td>
+            <td>
+              230
+              <br />
+              <span> 5.75 hrs</span>
+            </td>
+            <td>
+              $240
+              <br />
+              <span> 6 hrs </span>
+            </td>
+          </tr>
+          <tr>
+            <td>4800-5000</td>
+            <td>
+              $740
+              <br />
+              <span> 18.5 hrs </span>
+            </td>
+            <td>
+              $380
+              <br />
+              <span> 9.5 hrs </span>
+            </td>
+            <td>
+              $230
+              <br />
+              <span> 5.75 hrs </span>
+            </td>
+            <td>
+              $240
+              <br />
+              <span> 6 hrs </span>
+            </td>
+            <td>
+              $250
+              <br />
+              <span> 6.25 hrs </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section class="section scope">
+      <div class="section-title">
+        <h2 class="scope-heading">
+          scope of work
+          <div class="underline"></div>
+        </h2>
+      </div>
+      <div class="section-center scope-center">
+        <article class="item">
+          <h4>deep clean</h4>
+          <p>
+            The Deep Clean involves wet wiping of all the doors, cabinet fronts,
+            baseboards, blinds, all light fixtures, fronts and sides of dressers
+            and nightstands, all reachable ceiling fans, top of refrigerator,
+            and inside oven.
+          </p>
+          <h5 class="item-heading">
+            bathrooms
             <div class="underline"></div>
-          </h2>
-        </div>
-        <div class="section-center scope-center">
-          <article class="item">
-            <h4>deep clean</h4>
-            <p>
-              The Deep Clean involves wet wiping of all the doors, cabinet
-              fronts, baseboards, blinds, all light fixtures, fronts and sides
-              of dressers and nightstands, all reachable ceiling fans, top of
-              refrigerator, and inside oven.
-            </p>
-            <h5 class="item-heading">
-              bathrooms
-              <div class="underline"></div>
-            </h5>
-            <p>
-              It also includes cleaning of all bathrooms, which include all
-              sinks, showers, tubs, toilets, vanitys and mirrors. Kitchen, all
-              countertops, inside and out microwave, outside of toaster, and
-              outside of oven.
-            </p>
-            <h5 class="item-heading">
-              bedrooms
-              <div class="underline"></div>
-            </h5>
-            <p>
-              Bedrooms, dusting tops of nightstands, top of dressers, making of
-              all the beds, and changing linens on only one bed of clients
-              choosing.
-            </p>
-            <h5 class="item-heading">
-              living room
-              <div class="underline"></div>
-            </h5>
-            <p>
-              Living room, dust all end tables, and dust top of mantel. This
-              includes upstairs and downstairs. Also vacuum and mop all rooms.
-            </p>
-          </article>
-          <article class="item">
-            <h4>general/maintenance</h4>
-            <p>
-              The General Clean and Weekly, Bi-Weekly, and Monthly Cleans. The
-              General Clean involves more time then a regular maintenance clean
-              because its usually a clients first time clean. It involves
-              dusting of all the following items with a duster, doors, cabinet
-              fronts, baseboards, blinds, all light fixtures, fronts and sides
-              of dressers and nightstands, all reachable ceiling fans, and the
-              top of refrigerator.
-            </p>
-            <h5 class="item-heading">
-              bathrooms
-              <div class="underline"></div>
-            </h5>
-            <p>
-              It also includes cleaning of all bathrooms, which include all
-              sinks, showers, tubs, toilets, vanitys and mirrors. Kitchen, all
-              countertops, inside and out microwave, outside of toaster, and
-              outside of oven.
-            </p>
-            <h5 class="item-heading">
-              bedrooms
-              <div class="underline"></div>
-            </h5>
-            <p>
-              Bedrooms, dusting tops of nightstands, top of dressers, making of
-              all the beds, and changing linens on only one bed of clients
-              choosing.
-            </p>
-            <h5 class="item-heading">
-              living room
-              <div class="underline"></div>
-            </h5>
-            <p>
-              Living room, dust all end tables, and dust top of mantel. This
-              includes upstairs and downstairs. Also vacuum and mop all rooms.
-            </p>
-          </article>
-        </div>
-      </section>
-    </div>
+          </h5>
+          <p>
+            It also includes cleaning of all bathrooms, which include all sinks,
+            showers, tubs, toilets, vanitys and mirrors. Kitchen, all
+            countertops, inside and out microwave, outside of toaster, and
+            outside of oven.
+          </p>
+          <h5 class="item-heading">
+            bedrooms
+            <div class="underline"></div>
+          </h5>
+          <p>
+            Bedrooms, dusting tops of nightstands, top of dressers, making of
+            all the beds, and changing linens on only one bed of clients
+            choosing.
+          </p>
+          <h5 class="item-heading">
+            living room
+            <div class="underline"></div>
+          </h5>
+          <p>
+            Living room, dust all end tables, and dust top of mantel. This
+            includes upstairs and downstairs. Also vacuum and mop all rooms.
+          </p>
+        </article>
+        <article class="item">
+          <h4>general/maintenance</h4>
+          <p>
+            The General Clean and Weekly, Bi-Weekly, and Monthly Cleans. The
+            General Clean involves more time then a regular maintenance clean
+            because its usually a clients first time clean. It involves dusting
+            of all the following items with a duster, doors, cabinet fronts,
+            baseboards, blinds, all light fixtures, fronts and sides of dressers
+            and nightstands, all reachable ceiling fans, and the top of
+            refrigerator.
+          </p>
+          <h5 class="item-heading">
+            bathrooms
+            <div class="underline"></div>
+          </h5>
+          <p>
+            It also includes cleaning of all bathrooms, which include all sinks,
+            showers, tubs, toilets, vanitys and mirrors. Kitchen, all
+            countertops, inside and out microwave, outside of toaster, and
+            outside of oven.
+          </p>
+          <h5 class="item-heading">
+            bedrooms
+            <div class="underline"></div>
+          </h5>
+          <p>
+            Bedrooms, dusting tops of nightstands, top of dressers, making of
+            all the beds, and changing linens on only one bed of clients
+            choosing.
+          </p>
+          <h5 class="item-heading">
+            living room
+            <div class="underline"></div>
+          </h5>
+          <p>
+            Living room, dust all end tables, and dust top of mantel. This
+            includes upstairs and downstairs. Also vacuum and mop all rooms.
+          </p>
+        </article>
+      </div>
+    </section>
     <script src="./app.js"></script>
   </body>
 </html>

@@ -31,11 +31,10 @@ const hChange = document.querySelectorAll('.h-change');
 const toggleBtns = document.querySelectorAll('.toggle-btn');
 const lockIcon = document.querySelectorAll('.lock-icon');
 const unlock = document.querySelectorAll('.unlock');
-const maidQuoteIcon = document.querySelector('.maid-quote-icon');
-const documentSelect = document.querySelector('.document-select');
+
 const maidQuoteContainer = document.querySelector('.maid-quote-container');
 
-// Show Page
+// Show Page On Mobile
 window.setTimeout(() => {
   maidQuoteContainer.style.display = 'none';
 }, 2000);
