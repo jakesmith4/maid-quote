@@ -31,6 +31,17 @@ const hChange = document.querySelectorAll('.h-change');
 const toggleBtns = document.querySelectorAll('.toggle-btn');
 const lockIcon = document.querySelectorAll('.lock-icon');
 const unlock = document.querySelectorAll('.unlock');
+const maidQuoteIcon = document.querySelector('.maid-quote-icon');
+const documentSelect = document.querySelector('.document-select');
+
+// Dom Content Loaded Event
+window.addEventListener('DOMContentLoaded', () => {
+  documentSelect.style.display = 'none';
+  window.setTimeout(() => {
+    maidQuoteIcon.style.display = 'none';
+    documentSelect.style.display = 'block';
+  }, 2000);
+});
 
 toggleBtns[0].addEventListener('click', (e) => {
   lockFunction(0);
