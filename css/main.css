@@ -611,15 +611,21 @@ Scope Of Work
   font-style: italic;
 }
 
+.item {
+  margin-bottom: 2rem;
+}
+
 .item h4 {
   background: #f9bc60;
   text-align: center;
+  font-style: italic;
 }
 
 .item p {
   color: #e16162;
   letter-spacing: 1px;
   padding: 0.5rem 2rem;
+  margin: 0;
 }
 
 @media screen and (min-width: 576px) {
