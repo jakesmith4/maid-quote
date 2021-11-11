@@ -298,24 +298,32 @@ img {
 }
 
 /* Maid Quote CSS */
+.maid-quote-container {
+  position: fixed;
+  background: #fff;
+}
 
 .maid-quote-icon {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   margin-top: 2rem;
 }
 
+@media screen and (min-width: 576px) {
+  .maid-quote-container {
+    display: none !important;
+  }
+}
+
 .maid-quote-icon img {
-  border: 5px solid #fff;
-  border-radius: 50%;
+  border: 20px solid #fff;
 }
 
 .maid-quote-icon::before {
   content: 'Maid Quote';
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #8dc63f;
   font-style: italic;
   position: absolute;

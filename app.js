@@ -33,15 +33,12 @@ const lockIcon = document.querySelectorAll('.lock-icon');
 const unlock = document.querySelectorAll('.unlock');
 const maidQuoteIcon = document.querySelector('.maid-quote-icon');
 const documentSelect = document.querySelector('.document-select');
+const maidQuoteContainer = document.querySelector('.maid-quote-container');
 
-// Dom Content Loaded Event
-window.addEventListener('DOMContentLoaded', () => {
-  documentSelect.style.display = 'none';
-  window.setTimeout(() => {
-    maidQuoteIcon.style.display = 'none';
-    documentSelect.style.display = 'block';
-  }, 2000);
-});
+// Show Page
+window.setTimeout(() => {
+  maidQuoteContainer.style.display = 'none';
+}, 2000);
 
 toggleBtns[0].addEventListener('click', (e) => {
   lockFunction(0);
