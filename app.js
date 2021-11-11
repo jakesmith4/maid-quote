@@ -35,9 +35,9 @@ const unlock = document.querySelectorAll('.unlock');
 const maidQuoteContainer = document.querySelector('.maid-quote-container');
 
 // Show Page On Mobile
-window.setTimeout(() => {
+window.addEventListener('load', () => {
   maidQuoteContainer.style.display = 'none';
-}, 2000);
+});
 
 toggleBtns[0].addEventListener('click', (e) => {
   lockFunction(0);
