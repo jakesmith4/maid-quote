@@ -311,10 +311,8 @@ img {
 
 .maid-quote-icon {
   height: 100vh;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 .maid-quote-icon img {
@@ -327,7 +325,10 @@ img {
   color: #8dc63f;
   font-style: italic;
   position: absolute;
+  text-align: center;
   top: 20px;
+  right: 50%;
+  transform: translate(50%);
 }
 
 .header {

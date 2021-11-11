@@ -36,8 +36,6 @@ const maidQuoteContainer = document.querySelector('.maid-quote-container');
 
 // Show Page On Mobile
 maidQuoteContainer.style.display = 'none';
-// window.setTimeout(() => {
-// }, 2000);
 
 toggleBtns[0].addEventListener('click', (e) => {
   lockFunction(0);
