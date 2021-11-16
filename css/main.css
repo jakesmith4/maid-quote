@@ -549,6 +549,24 @@ small {
   padding: 0 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .display-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .display-options {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .display-options {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 /* 
 =====================
 Cost Per Square Foot
@@ -700,26 +718,105 @@ Scope Of Work
   }
 }
 
+/* 
+===============
+Equipment
+===============
+*/
+.equipment .section-title h2 {
+  color: #004643;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.equipment h3 {
+  text-align: center;
+  letter-spacing: 1px;
+  color: #004643;
+  font-style: italic;
+}
+
+.equipment-center h4 {
+  color: #004643;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.img-container {
+  width: 100px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 800px) {
+  .img-container {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .img-container {
+    width: 300px;
+  }
+}
+
+.equipment-center {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.single-item {
+  flex: 0 0 33.333%;
+  flex: 0 0 calc(33.333% - 2rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Vacuum */
+.vac-box h4 {
+  color: #004643;
+  text-align: center;
+}
+
+.vac-text {
+  text-align: center;
+  margin: 0 auto;
+  color: #004643;
+  letter-spacing: 1px;
+  padding: 0 2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.vac-item {
+  margin-bottom: 2rem;
+}
+
+.img-vac-container img {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 576px) {
-  .display-options {
-    grid-template-columns: repeat(2, 1fr);
+  .vacuum-center {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+  }
+
+  .vac-item {
+    flex: 0 0 calc(50% - 2rem);
   }
 }
 
 @media screen and (min-width: 768px) {
-  .display-options {
-    grid-template-columns: repeat(3, 1fr);
+  .vac-item {
+    flex: 0 0 calc(33.333% - 2rem);
   }
 }
 
 @media screen and (min-width: 992px) {
-  .display-options {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (min-width: 1250px) {
-  .display-options {
-    grid-template-columns: repeat(5, 1fr);
+  .vac-item {
+    flex: 0 0 calc(25% - 2rem);
   }
 }
