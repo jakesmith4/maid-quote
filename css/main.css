@@ -663,13 +663,18 @@ Scope Of Work
   color: #e16162;
   padding: 0 2rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   /* list-style-type: disc; */
+}
+
+.item ul li {
+  margin-bottom: 0.5rem;
 }
 
 .main-text {
   font-style: italic;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .bold {
