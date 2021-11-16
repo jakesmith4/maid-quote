@@ -778,45 +778,28 @@ Equipment
   text-align: center;
 }
 
-.vac-text {
-  text-align: center;
+.main-vac-img-container {
+  max-width: 500px;
   margin: 0 auto;
-  color: #004643;
-  letter-spacing: 1px;
-  padding: 0 2rem;
-  font-style: italic;
-  margin-bottom: 2rem;
+}
+
+.vac-center {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
 }
 
 .vac-item {
-  margin-bottom: 2rem;
+  flex: 0 0 calc(50% - 1rem);
+  margin-bottom: 1rem;
 }
 
-.img-vac-container img {
-  max-width: 400px;
-  margin: 0 auto;
+.vac-img-container img {
+  max-width: 300px;
 }
 
 @media screen and (min-width: 576px) {
-  .vacuum-center {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 2rem;
-  }
-
   .vac-item {
-    flex: 0 0 calc(50% - 2rem);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .vac-item {
-    flex: 0 0 calc(33.333% - 2rem);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .vac-item {
-    flex: 0 0 calc(25% - 2rem);
+    flex: 0 0 calc(33.333% - 1rem);
   }
 }
