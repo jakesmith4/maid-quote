@@ -667,7 +667,7 @@ Scope Of Work
   /* list-style-type: disc; */
 }
 
-.deep-text {
+.main-text {
   font-style: italic;
   font-weight: bold;
 }
@@ -680,10 +680,18 @@ Scope Of Work
   border-bottom: 2px solid #f9bc60;
 }
 
-@media screen and (min-width: 576px) {
+.item hr {
+  border: 3px solid #e16162;
+  border-radius: var(--borderRadius);
+}
+
+@media screen and (min-width: 675px) {
   .scope-center {
     display: flex;
     gap: 0 2rem;
+  }
+  .item {
+    flex: 0 0 calc(50% - 2rem);
   }
 }
 
