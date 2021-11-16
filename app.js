@@ -34,11 +34,6 @@ const unlock = document.querySelectorAll('.unlock');
 
 const maidQuoteContainer = document.querySelector('.maid-quote-container');
 
-// Show Page On Mobile
-window.addEventListener('load', () => {
-  maidQuoteContainer.style.display = 'none';
-});
-
 toggleBtns[0].addEventListener('click', (e) => {
   lockFunction(0);
   e.preventDefault();

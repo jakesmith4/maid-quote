@@ -134,7 +134,6 @@ a {
 }
 
 ul {
-  list-style-type: none;
   padding: 0;
 }
 
@@ -301,17 +300,10 @@ img {
 .maid-quote-container {
   position: fixed;
   background: #fff;
-}
-
-@media screen and (min-width: 576px) {
-  .maid-quote-container {
-    display: none !important;
-  }
+  display: none;
 }
 
 .maid-quote-icon {
-  height: 100vh;
-  justify-content: center;
   margin-top: 8rem;
 }
 
@@ -655,13 +647,6 @@ Scope Of Work
   font-style: italic;
 }
 
-.item p {
-  color: #e16162;
-  letter-spacing: 1px;
-  padding: 0.5rem 2rem;
-  margin: 0;
-}
-
 .item-heading {
   padding: 0 2rem;
   color: #004643;
@@ -673,6 +658,28 @@ Scope Of Work
 .item-heading .underline {
   margin-left: 0;
 }
+
+.item ul {
+  color: #e16162;
+  padding: 0 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* list-style-type: disc; */
+}
+
+.deep-text {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.item ul span {
+  border-bottom: 2px solid #f9bc60;
+}
+
 @media screen and (min-width: 576px) {
   .scope-center {
     display: flex;
