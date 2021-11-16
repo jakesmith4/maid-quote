@@ -781,6 +781,7 @@ Equipment
 .main-vac-img-container {
   max-width: 500px;
   margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 .vac-center {
