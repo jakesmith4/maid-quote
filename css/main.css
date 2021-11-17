@@ -730,6 +730,15 @@ Equipment
   margin-bottom: 2rem;
 }
 
+.equipment-text {
+  color: var(--grey-400);
+  letter-spacing: 1px;
+  padding: 0 2rem;
+  font-style: italic;
+  text-align: center;
+  margin: 0 auto 1.5rem;
+}
+
 .equipment h3 {
   text-align: center;
   letter-spacing: 1px;
@@ -748,6 +757,18 @@ Equipment
   margin: 0 auto;
 }
 
+.equipment-center {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.single-item {
+  flex: 0 0 calc(33.333% - 2rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 @media screen and (min-width: 800px) {
   .img-container {
     width: 200px;
@@ -758,19 +779,6 @@ Equipment
   .img-container {
     width: 300px;
   }
-}
-
-.equipment-center {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.single-item {
-  flex: 0 0 33.333%;
-  flex: 0 0 calc(33.333% - 2rem);
-  margin-bottom: 2rem;
-  text-align: center;
 }
 
 /* Vacuum */
@@ -828,6 +836,7 @@ Micros
   margin-top: 2rem;
   gap: 0 2rem;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .micros-item {
@@ -840,4 +849,51 @@ Micros
     flex: 0 0 calc(33.333% - 2rem);
     margin-bottom: 0;
   }
+}
+
+/* 
+=============
+Chemicals
+=============
+*/
+.chemical-center {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.chemical-item {
+  flex: 0 0 calc(33.333% - 2rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.chemical-center h4 {
+  color: #004643;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* 
+===============
+Tools
+===============
+*/
+.tool-item h4 {
+  color: #004643;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.tools-center {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.tool-item {
+  flex: 0 0 calc(50% - 1rem);
 }
