@@ -831,10 +831,12 @@ Micros
 
 .micros-item {
   flex: 0 0 calc(50% - 2rem);
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 768px) {
   .micros-item {
     flex: 0 0 calc(33.333% - 2rem);
+    margin-bottom: 0;
   }
 }
