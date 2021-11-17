@@ -896,4 +896,5 @@ Tools
 
 .tool-item {
   flex: 0 0 calc(50% - 1rem);
+  margin-bottom: 2rem;
 }
