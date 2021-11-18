@@ -550,6 +550,11 @@ small {
   padding: 0 1rem;
 }
 
+.work-heading {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
 @media screen and (min-width: 768px) {
   .display-options {
     grid-template-columns: repeat(3, 1fr);
