@@ -739,6 +739,10 @@ Equipment
   margin: 0 auto 1.5rem;
 }
 
+.equipment-text span {
+  border-bottom: 2px solid #f9bc60;
+}
+
 .equipment h3 {
   text-align: center;
   letter-spacing: 1px;
