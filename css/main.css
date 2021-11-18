@@ -787,30 +787,45 @@ Equipment
   text-align: center;
 }
 
-.main-vac-img-container {
-  max-width: 500px;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-}
-
 .vac-center {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 1rem;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0 2rem;
 }
 
 .vac-item {
-  flex: 0 0 calc(50% - 1rem);
+  flex: 0 0 calc(50% - 2rem);
   margin-bottom: 1rem;
 }
 
 .vac-img-container img {
-  max-width: 300px;
+  width: 130px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 576px) {
-  .vac-item {
-    flex: 0 0 calc(33.333% - 1rem);
+  .vac-img-container img {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .vac-img-container img {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .vac-img-container img {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .vac-img-container img {
+    width: 400px;
   }
 }
 
@@ -847,7 +862,6 @@ Micros
 @media screen and (min-width: 768px) {
   .micros-item {
     flex: 0 0 calc(33.333% - 2rem);
-    margin-bottom: 0;
   }
 }
 
